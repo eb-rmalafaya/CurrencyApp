@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{4944499B-1999-4070-BB8E-1FB6B5547F62}</ProjectGuid>
+    <ProjectGuid>{9ABB711D-8070-42AE-950B-609DBF0F1943}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CurrencyApplication.UWP</RootNamespace>
@@ -133,7 +133,12 @@
       <Name>Visual C++ 2015 Runtime for Universal Windows Platform Apps</Name>
     </SDKReference>
   </ItemGroup>
-  <Import Project="..\CurrencyApplication\CurrencyApplication.projitems" Label="Shared" Condition="Exists('..\CurrencyApplication\CurrencyApplication.projitems')" />
+  <ItemGroup>
+    <ProjectReference Include="..\CurrencyApplication\CurrencyApplication.csproj">
+      <Project>{09ac9516-31f1-46d4-950d-b7413e9cab4b}</Project>
+      <Name>CurrencyApplication</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

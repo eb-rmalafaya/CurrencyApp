@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>CurrencyApplication</string>
+	<string>CurrencyApplication.iOS</string>
 	<key>CFBundleName</key>
-	<string>CurrencyApplication</string>
+	<string>CurrencyApplication.iOS</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.companyname.CurrencyApplication</string>
 	<key>CFBundleShortVersionString</key>
@@ -40,7 +40,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>XSAppIconAssets</key>
-	<string>Assets.xcassets/AppIcon.appiconset</string>
 </dict>
 </plist>

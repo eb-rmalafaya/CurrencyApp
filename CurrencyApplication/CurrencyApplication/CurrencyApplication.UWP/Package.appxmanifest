@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="5ee164cd-b27b-4ce2-821f-49d2b46a56f3"
+    Name="fcad2e22-ede5-49d5-9bf1-bc498e536fca"
     Publisher="CN=paulo"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="5ee164cd-b27b-4ce2-821f-49d2b46a56f3" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="fcad2e22-ede5-49d5-9bf1-bc498e536fca" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>CurrencyApplication.UWP</DisplayName>
