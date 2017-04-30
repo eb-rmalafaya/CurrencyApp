@@ -9,10 +9,7 @@ namespace CurrencyApplication.Helpers
 {
     interface IHTTPhandler
     {
-        Task<List<CurrencyDTO>> RefreshDataAsync();
-
-        Task SaveTodoItemAsync(CurrencyDTO item, bool isNewItem);
-
-        Task DeleteTodoItemAsync(string id);
+        Task<String> RefreshDataAsync(String url);
+       
     }
 }

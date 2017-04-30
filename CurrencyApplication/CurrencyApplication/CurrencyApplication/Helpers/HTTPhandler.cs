@@ -21,7 +21,7 @@ namespace CurrencyApplication.Helpers
 
         public HTTPHandler()
         {
-            var authData = string.Format("{0}:{1}", API.Username, API.Password);
+            var authData = string.Format("{0}:{1}", "Username", "Password");
             var authHeaderValue = Convert.ToBase64String(Encoding.UTF8.GetBytes(authData));
 
             client = new HttpClient();
@@ -29,20 +29,19 @@ namespace CurrencyApplication.Helpers
             client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", authHeaderValue);
         }
 
-        public async Task<List<CurrencyDTO>> RefreshDataAsync()
+        public async Task<String> RefreshDataAsync(String url)
         {
-            Items = new List<CurrencyDTO>();
 
-            // RestUrl = http://developer.xamarin.com:8081/api/todoitems{0}
-            var uri = new Uri(string.Format(API.RestUrl, string.Empty));
-
+            var uri = new Uri(url);
+            String content = null;
             try
             {
                 var response = await client.GetAsync(uri);
+
                 if (response.IsSuccessStatusCode)
                 {
-                    var content = await response.Content.ReadAsStringAsync();
-                    Items = JsonConvert.DeserializeObject<List<CurrencyDTO>>(content);
+                    content = await response.Content.ReadAsStringAsync();
+                    //Items = JsonConvert.DeserializeObject<List<CurrencyDTO>>(content);
                 }
             }
             catch (Exception ex)
@@ -50,13 +49,13 @@ namespace CurrencyApplication.Helpers
                 Debug.WriteLine(@"				ERROR {0}", ex.Message);
             }
 
-            return Items;
+            return content;
         }
 
         public async Task SaveTodoItemAsync(CurrencyDTO item, bool isNewItem = false)
         {
             // RestUrl = http://developer.xamarin.com:8081/api/todoitems{0}
-            var uri = new Uri(string.Format(API.RestUrl, item.ID));
+            var uri = new Uri(string.Format("RestUrl", item.ID));
 
             try
             {
@@ -85,10 +84,10 @@ namespace CurrencyApplication.Helpers
             }
         }
 
-        public async Task DeleteTodoItemAsync(string id)
+        public async Task DeleteTodoItemAsync(string url)
         {
             // RestUrl = http://developer.xamarin.com:8081/api/todoitems{0}
-            var uri = new Uri(string.Format(API.RestUrl, id));
+            var uri = new Uri(url);
 
             try
             {
