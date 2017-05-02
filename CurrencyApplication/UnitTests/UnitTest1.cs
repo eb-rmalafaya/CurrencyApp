@@ -82,8 +82,7 @@ namespace UnitTests
         {
             CurrencyApplication.API.APIHandler api = new CurrencyApplication.API.APIHandler();
             List<CurrencyDTO> list = await api.GetCurrenciesDTO();
-
-            Assert.IsNull(list);
+            Assert.IsNotNull(list);
         }
 
         [TestMethod]
@@ -102,6 +101,15 @@ namespace UnitTests
             List<CurrencyDTO> list = await api.GetCurrenciesDTO();
             Double response = api.Convert("USD", "EUR", 1, list);
             Assert.IsTrue( response < 1);
+        }
+
+        [TestMethod]
+        public async Task ConvertTest3()
+        {
+            CurrencyApplication.API.APIHandler api = new CurrencyApplication.API.APIHandler();
+            List<CurrencyDTO> list = await api.GetCurrenciesDTO();
+            Double response = api.Convert("USD", "EUR", 1, list);
+            Assert.IsTrue(response < 1);
         }
     }
 }

@@ -49,7 +49,12 @@ namespace CurrencyApplication.API
                 }
             }
 
-            return (to.Price/from.Price) * qtd;
+            return Convert(to, from, qtd);
+        }
+
+        public Double Convert(CurrencyDTO symbolFrom, CurrencyDTO symbolTo, Double qtd)
+        {
+            return (symbolFrom.Price / symbolTo.Price) * qtd;
         }
 
         public async Task<List<CurrencyDTO>> GetCurrenciesDTO()
