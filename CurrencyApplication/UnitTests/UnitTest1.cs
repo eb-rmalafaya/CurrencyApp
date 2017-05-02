@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using CurrencyApplication.Models;
 
 namespace UnitTests
 {
@@ -11,7 +12,7 @@ namespace UnitTests
     public class UnitTest1
     {
         [TestMethod]
-        public void PedidoAPI()
+        public void PedidoAPITest()
         {
             string json = @"{
 	'list': {
@@ -77,11 +78,30 @@ namespace UnitTests
         }
 
         [TestMethod]
-        public async Task LeituraDeCurrencies()
+        public async Task LeituraDeCurrenciesTest()
         {
             CurrencyApplication.API.APIHandler api = new CurrencyApplication.API.APIHandler();
-            var list = await api.GetCurrenciesDTO();
+            List<CurrencyDTO> list = await api.GetCurrenciesDTO();
+
             Assert.IsNull(list);
+        }
+
+        [TestMethod]
+        public async Task ConvertTest()
+        {
+            CurrencyApplication.API.APIHandler api = new CurrencyApplication.API.APIHandler();
+            List<CurrencyDTO> list = await api.GetCurrenciesDTO();
+            Double response = api.Convert("EUR", "USD", 1, list);
+            Assert.IsTrue(response > 1);
+        }
+
+        [TestMethod]
+        public async Task ConvertTest2()
+        {
+            CurrencyApplication.API.APIHandler api = new CurrencyApplication.API.APIHandler();
+            List<CurrencyDTO> list = await api.GetCurrenciesDTO();
+            Double response = api.Convert("USD", "EUR", 1, list);
+            Assert.IsTrue( response < 1);
         }
     }
 }

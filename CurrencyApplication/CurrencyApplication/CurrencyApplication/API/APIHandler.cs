@@ -24,6 +24,33 @@ namespace CurrencyApplication.API
             HTTPHandler client = new HTTPHandler();
             return await client.RefreshDataAsync(API_URL_ALL);
         }
+    
+        public Double Convert(String symbolFrom, String symbolTo, Double qtd, List<CurrencyDTO> list)
+        {
+            CurrencyDTO from = null;
+            CurrencyDTO to = null;
+            foreach (CurrencyDTO currency in list)
+            {
+                if (currency.Symbol != null && currency.Symbol.Length > 0)
+                {
+                    var symbol = currency.Symbol.Substring(0, currency.Symbol.Length - 2);
+                    if (symbol.CompareTo(symbolFrom) == 0)
+                    {
+                        from = currency;
+                        if (to != null) break;
+                        continue;
+                    }
+                    if (symbol.CompareTo(symbolTo) == 0)
+                    {
+                        to = currency;
+                        if (from != null) break;
+                        continue;
+                    }
+                }
+            }
+
+            return (to.Price/from.Price) * qtd;
+        }
 
         public async Task<List<CurrencyDTO>> GetCurrenciesDTO()
         {
