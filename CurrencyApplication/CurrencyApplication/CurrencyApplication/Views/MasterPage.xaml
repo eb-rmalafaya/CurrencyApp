@@ -7,7 +7,7 @@
 			 Title="Personal Organiser">
     <ContentPage.Content>
         <StackLayout VerticalOptions="FillAndExpand">
-            <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="None">
+            <ListView x:Name="listView" VerticalOptions="FillAndExpand" SeparatorVisibility="Default">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ImageCell Text="{Binding Title}" ImageSource="{Binding IconSource}" />
