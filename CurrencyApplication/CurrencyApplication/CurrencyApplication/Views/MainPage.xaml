@@ -8,9 +8,9 @@
         </MasterDetailPage.Master>
         <MasterDetailPage.Detail>
             <NavigationPage>
-                <x:Arguments>
-                    <local:AboutPage />
-                </x:Arguments>
-            </NavigationPage>
+            <x:Arguments>
+                <local:AboutPage />
+            </x:Arguments>
+        </NavigationPage>
         </MasterDetailPage.Detail>
     </MasterDetailPage>

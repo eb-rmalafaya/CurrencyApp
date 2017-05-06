@@ -20,11 +20,17 @@ namespace CurrencyApplication.Views
             {
                 Title = "Profile",
                 IconSource = "profile_generic.png",
-                TargetType = typeof(AboutPage)
+                TargetType = typeof(ListView)
             });
             masterPageItems.Add(new MasterPageItem
             {
                 Title = "Wallet",
+                IconSource = "profile_generic.png",
+                TargetType = typeof(AboutPage)
+            });
+            masterPageItems.Add(new MasterPageItem
+            {
+                Title = "Settings",
                 IconSource = "profile_generic.png",
                 TargetType = typeof(AboutPage)
             });

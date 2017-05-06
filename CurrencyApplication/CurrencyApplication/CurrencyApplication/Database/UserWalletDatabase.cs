@@ -8,24 +8,19 @@ using System.Threading.Tasks;
 
 namespace CurrencyApplication.Database
 {
-    class UserWalletDatabase
+    public class UserWalletDatabase
     {
         readonly SQLiteAsyncConnection database;
 
         public UserWalletDatabase(string dbPath)
         {
             database = new SQLiteAsyncConnection(dbPath);
-            database.CreateTableAsync<UserSettings>().Wait();
+            database.CreateTableAsync<Wallet>().Wait();
         }
 
-        public Task<UserSettings> GetUserSettings()
+        public Task<List<Wallet>> GetWallets()
         {
-            return database.Table<UserSettings>().FirstAsync();
-        }
-
-        public Task<UserSettings> GetItemAsync(int id)
-        {
-            return database.Table<UserSettings>().Where(i => i.ID == id).FirstOrDefaultAsync();
+            return database.Table<Wallet>().ToListAsync();
         }
 
         public Task<int> SaveItemAsync(UserSettings item)

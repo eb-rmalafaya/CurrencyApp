@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CurrencyApplication.Models
 {
-    class UserSettings
+    public class UserSettings
     {
         public int ID { get; set; }
         public string Name { get; set; }

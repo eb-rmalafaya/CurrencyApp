@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CurrencyApplication.Models
 {
-    class Wallet
+    public class Wallet
     {
         public string ID { get; set; }
         public string Symbol { get; set; }
