@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using Todo.Models;
 using Xamarin.Forms;
 
 namespace Todo
@@ -15,13 +16,13 @@ namespace Todo
 			var toolbarItem = new ToolbarItem
 			{
 				Text = "+",
-				Icon = Device.OnPlatform(null, "plus.png", "plus.png")
+				Icon = Device.OnPlatform(null, "plus.png", "add.png")
 			};
 			toolbarItem.Clicked += async (sender, e) =>
 			{
 				await Navigation.PushAsync(new TodoItemPageCS
 				{
-					BindingContext = new TodoItem()
+					BindingContext = new Wallet()
 				});
 			};
 			ToolbarItems.Add(toolbarItem);
@@ -58,13 +59,13 @@ namespace Todo
 			};
 			listView.ItemSelected += async (sender, e) =>
 			{
-				((App)App.Current).ResumeAtTodoId = (e.SelectedItem as TodoItem).ID;
-				Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as TodoItem).ID);
+				((App)App.Current).ResumeAtTodoId = (e.SelectedItem as Wallet).ID;
+				Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as Wallet).ID);
 
 				await Navigation.PushAsync(new TodoItemPageCS
 				{
-					BindingContext = e.SelectedItem as TodoItem
-				});
+					BindingContext = e.SelectedItem as Wallet
+                });
 			};
 
 			Content = listView;

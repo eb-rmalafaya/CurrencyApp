@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using Todo.Models;
 using Xamarin.Forms;
 
 namespace Todo
@@ -24,19 +25,19 @@ namespace Todo
 		{
 			await Navigation.PushAsync(new TodoItemPage
 			{
-				BindingContext = new TodoItem()
+				BindingContext = new Wallet()
 			});
 		}
 
 		async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
-			((App)App.Current).ResumeAtTodoId = (e.SelectedItem as TodoItem).ID;
-			Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as TodoItem).ID);
+			((App)App.Current).ResumeAtTodoId = (e.SelectedItem as Wallet).ID;
+			Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as Wallet).ID);
 
 			await Navigation.PushAsync(new TodoItemPage
 			{
-				BindingContext = e.SelectedItem as TodoItem
-			});
+				BindingContext = e.SelectedItem as Wallet
+            });
 		}
 	}
 }

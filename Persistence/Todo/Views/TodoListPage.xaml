@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Todo.TodoListPage" Title="Todo">
+             x:Class="Todo.TodoListPage" Title="Wallet">
 	<ContentPage.ToolbarItems>
 		<ToolbarItem Text="+" Clicked="OnItemAdded">
 			<ToolbarItem.Icon>
-				<OnPlatform x:TypeArguments="FileImageSource" Android="plus.png" />
+				<OnPlatform x:TypeArguments="FileImageSource" WinPhone="add.png" Android="plus.png" />
 			</ToolbarItem.Icon>
 		</ToolbarItem>
 	</ContentPage.ToolbarItems>
@@ -14,8 +14,7 @@
 			<DataTemplate>
 				<ViewCell>
 					<StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-						<Label Text="{Binding Name}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-						<Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />
+                        <Label Text="{Binding Print}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
 					</StackLayout>
 				</ViewCell>
 			</DataTemplate>

@@ -1,4 +1,5 @@
-﻿using Xamarin.Forms;
+﻿using Todo.Models;
+using Xamarin.Forms;
 
 namespace Todo
 {
@@ -20,7 +21,7 @@ namespace Todo
 			var saveButton = new Button { Text = "Save" };
 			saveButton.Clicked += async (sender, e) =>
 			{
-				var todoItem = (TodoItem)BindingContext;
+				var todoItem = (Wallet)BindingContext;
 				await App.Database.SaveItemAsync(todoItem);
 				await Navigation.PopAsync();
 			};
@@ -28,7 +29,7 @@ namespace Todo
 			var deleteButton = new Button { Text = "Delete" };
 			deleteButton.Clicked += async (sender, e) =>
 			{
-				var todoItem = (TodoItem)BindingContext;
+				var todoItem = (Wallet)BindingContext;
 				await App.Database.DeleteItemAsync(todoItem);
 				await Navigation.PopAsync();
 			};
@@ -42,8 +43,8 @@ namespace Todo
 			var speakButton = new Button { Text = "Speak" };
 			speakButton.Clicked += (sender, e) =>
 			{
-				var todoItem = (TodoItem)BindingContext;
-				DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
+				var todoItem = (Wallet)BindingContext;
+				DependencyService.Get<ITextToSpeech>().Speak(todoItem.Quantity + " " + todoItem.Symbol);
 			};
 
 			Content = new StackLayout

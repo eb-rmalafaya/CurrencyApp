@@ -1,4 +1,5 @@
 ﻿using System;
+using Todo.Models;
 using Xamarin.Forms;
 
 namespace Todo
@@ -12,14 +13,14 @@ namespace Todo
 
 		async void OnSaveClicked(object sender, EventArgs e)
 		{
-			var todoItem = (TodoItem)BindingContext;
+			var todoItem = (Wallet)BindingContext;
 			await App.Database.SaveItemAsync(todoItem);
 			await Navigation.PopAsync();
 		}
 
 		async void OnDeleteClicked(object sender, EventArgs e)
 		{
-			var todoItem = (TodoItem)BindingContext;
+			var todoItem = (Wallet)BindingContext;
 			await App.Database.DeleteItemAsync(todoItem);
 			await Navigation.PopAsync();
 		}
@@ -31,8 +32,8 @@ namespace Todo
 
 		void OnSpeakClicked(object sender, EventArgs e)
 		{
-			var todoItem = (TodoItem)BindingContext;
-			DependencyService.Get<ITextToSpeech>().Speak(todoItem.Name + " " + todoItem.Notes);
+			var todoItem = (Wallet)BindingContext;
+			DependencyService.Get<ITextToSpeech>().Speak(todoItem.Quantity + " " + todoItem.Symbol);
 		}
 	}
 }
