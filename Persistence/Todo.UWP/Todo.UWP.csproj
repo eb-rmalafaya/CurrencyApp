@@ -131,9 +131,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\Currency.csproj">
+    <ProjectReference Include="..\Todo\Todo.csproj">
       <Project>{5f610ea1-9e35-4870-ae9b-5e18b4b4d5b8}</Project>
-      <Name>Currency</Name>
+      <Name>Todo</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

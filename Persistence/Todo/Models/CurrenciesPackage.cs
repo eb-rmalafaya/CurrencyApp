@@ -1,7 +1,7 @@
-﻿using SQLite;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using SQLite;
 
-namespace CurrencyApplication.Models
+namespace Todo.Models
 {
     public class CurrenciesPackage
     {
@@ -9,6 +9,5 @@ namespace CurrencyApplication.Models
         public int ID { get; set; }
         public List<CurrencyDTO> Currencies { get; set; }
         public string RequestTimestamp { get; set; }
-
     }
 }

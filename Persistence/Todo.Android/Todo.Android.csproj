@@ -135,9 +135,9 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\Currency.csproj">
+    <ProjectReference Include="..\Todo\Todo.csproj">
       <Project>{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}</Project>
-      <Name>Currency</Name>
+      <Name>Todo</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
