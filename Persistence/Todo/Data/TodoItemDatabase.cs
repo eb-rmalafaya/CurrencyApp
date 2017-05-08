@@ -12,7 +12,7 @@ namespace Todo
 		public TodoItemDatabase(string dbPath)
 		{
 			database = new SQLiteAsyncConnection(dbPath);
-			database.CreateTableAsync<Wallet>().Wait();
+            database.CreateTableAsync<Wallet>().Wait();
 		}
 
 		public Task<List<Wallet>> GetItemsAsync()
