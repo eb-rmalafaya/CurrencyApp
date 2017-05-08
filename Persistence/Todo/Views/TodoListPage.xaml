@@ -10,15 +10,15 @@
 		</ToolbarItem>
         <ToolbarItem Text="Refresh" Clicked="OnRefresh">
             <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource" WinPhone="refresh.png" Android="refresh.png" />
+                <OnPlatform x:TypeArguments="FileImageSource" WinPhone="refresh.png" Android="refreshWhite.png" />
             </ToolbarItem.Icon>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
     <Frame>
         <StackLayout>
-            <Label BackgroundColor="#d9d9d9" TextColor="#47525E" 
-                   XAlign="Center"  FontSize="Micro"
-                   Text="Last Update: 6/05/2017 20:00:35" />
+            <Label x:Name="refreshLabel" BackgroundColor="#d9d9d9" TextColor="#47525E" 
+                   XAlign="Center"  FontSize="Medium"
+                   Text="Last Update: no updates" />
             <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>

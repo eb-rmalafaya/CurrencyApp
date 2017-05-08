@@ -10,6 +10,12 @@ namespace Todo.Models
             Symbol = "EUR";
         }
 
+        public Wallet(double qtd, string symbol)
+        {
+            Quantity = qtd;
+            Symbol = symbol;
+        }
+
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
         public string Symbol { get; set; }

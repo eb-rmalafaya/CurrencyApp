@@ -5,6 +5,11 @@ namespace Todo.Models
 {
     public class CurrencyDTO
     {
+        public CurrencyDTO()
+        {
+
+        }
+
         public CurrencyDTO(String name, String type, String ts, String utc, Double price, String symbol)
         {
             this.Name = name;
@@ -13,10 +18,13 @@ namespace Todo.Models
             this.Price = price;
             this.Symbol = symbol;
             this.Type = type;
+            //
+            this.RequestTimestamp = Utils.Utils.getCurrentTimestamp();
+            this.RequestTimestampString = Utils.Utils.getCurrentDateString();
         }
 
         [PrimaryKey, AutoIncrement]
-        public string ID { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public string Notes { get; set; }
         public bool Done { get; set; }
@@ -25,5 +33,8 @@ namespace Todo.Models
         public Double Price { get; set; }
         public String Symbol { get; set; }
         public String Type { get; set; }
+
+        public Int32 RequestTimestamp { get; set; }
+        public String RequestTimestampString { get; set; }
     }
 }

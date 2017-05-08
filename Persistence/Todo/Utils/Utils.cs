@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Connectivity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,6 +44,12 @@ namespace Todo.Utils
             DateTime dt = new DateTime(1970, 1, 1, 0, 0, 0, 0).AddSeconds(ts).ToLocalTime();
             string formattedDate = dt.ToString("dd-MM-yyyy hh:mm:ss");
             return formattedDate;
+        }
+
+        public static bool hasInternetAccess()
+        {
+            bool response = CrossConnectivity.Current.IsConnected;
+            return response;
         }
     }
 }
