@@ -23589,20 +23589,20 @@
     "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\paulo\\.nuget\\packages\\": {}
+    "C:\\Users\\jlmgo\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulo\\Documents\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\jlmgo\\OneDrive\\Documentos\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
       "projectName": "Todo.UWP",
-      "projectPath": "C:\\Users\\paulo\\Documents\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\paulo\\Documents\\CurrencyApp\\Persistence\\Todo.UWP\\project.json",
+      "projectPath": "C:\\Users\\jlmgo\\OneDrive\\Documentos\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\jlmgo\\OneDrive\\Documentos\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "C:\\Users\\paulo\\Documents\\CurrencyApp\\Persistence\\Todo\\Todo.csproj": {
-              "projectPath": "C:\\Users\\paulo\\Documents\\CurrencyApp\\Persistence\\Todo\\Todo.csproj"
+            "C:\\Users\\jlmgo\\OneDrive\\Documentos\\Projects\\CM\\CurrencyApp\\Persistence\\Todo\\Todo.csproj": {
+              "projectPath": "C:\\Users\\jlmgo\\OneDrive\\Documentos\\Projects\\CM\\CurrencyApp\\Persistence\\Todo\\Todo.csproj"
             }
           }
         }

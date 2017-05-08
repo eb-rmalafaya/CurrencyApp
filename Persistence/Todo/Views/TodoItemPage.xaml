@@ -7,8 +7,16 @@
 		<Entry Text="{Binding Quantity}" />
         <Picker x:Name="Currency" SelectedItem="{Binding Symbol}" HorizontalOptions="FillAndExpand">
             <Picker.Items>
+                <x:String>USD</x:String>
                 <x:String>EUR</x:String>
-                <x:String>DOLLAR</x:String>
+                <x:String>JPY</x:String>
+                <x:String>GBP</x:String>
+                <x:String>CHF</x:String>
+                <x:String>CNY</x:String>
+                <x:String>SEK</x:String>
+                <x:String>MXN</x:String>
+                <x:String>NOK</x:String>
+                <x:String>KRW</x:String>
             </Picker.Items>
         </Picker>
         <Button Text="Save" Clicked="OnSaveClicked" />

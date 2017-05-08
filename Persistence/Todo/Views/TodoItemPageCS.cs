@@ -1,4 +1,10 @@
-﻿using Todo.Models;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using Todo.API;
+using Todo.Models;
 using Xamarin.Forms;
 
 namespace Todo
@@ -9,13 +15,16 @@ namespace Todo
 		{
 			Title = "Todo Item";
 
-			var nameEntry = new Entry();
+            //Api call to get all currencies
+            //List<CurrencyRepresentation> currencies = LoadCurrencies.CurrenciesAvaiable();
+
+            var nameEntry = new Entry();
 			nameEntry.SetBinding(Entry.TextProperty, "Name");
 
-			var symbolEntry = new Picker();
+            Picker symbolEntry = new Picker();
             symbolEntry.SetBinding(Picker.SelectedItemProperty, "Currency");
-
-          	var saveButton = new Button { Text = "Save" };
+                        
+            var saveButton = new Button { Text = "Save" };
 			saveButton.Clicked += async (sender, e) =>
 			{
 				var todoItem = (Wallet)BindingContext;
@@ -61,5 +70,6 @@ namespace Todo
 				}
 			};
 		}
+       
 	}
 }
