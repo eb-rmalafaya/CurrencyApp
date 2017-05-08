@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using Todo.Models;
+using Todo.Views;
 using Xamarin.Forms;
 
 namespace Todo
@@ -35,16 +36,20 @@ namespace Todo
 
             // mudar label
         }
-
+        
         async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 			((App)App.Current).ResumeAtTodoId = (e.SelectedItem as Wallet).ID;
 			Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as Wallet).ID);
+            Wallet w = (e.SelectedItem as Wallet);
 
-			await Navigation.PushAsync(new TodoItemPage
-			{
-				BindingContext = e.SelectedItem as Wallet
+            
+            await Navigation.PushAsync(new UpdateWallet
+            {
+				BindingContext = e.SelectedItem as Wallet,
             });
+            
 		}
+        
 	}
 }

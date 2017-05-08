@@ -60,3 +60,4 @@ Persistence/Todo.UWP/Todo.UWP.nuget.targets
 *.json
 Persistence/Todo.UWP/Todo.UWP.nuget.targets
 Persistence/Todo.UWP/project.lock.json
+Persistence/Todo/Todo.csproj

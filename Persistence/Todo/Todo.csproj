@@ -47,11 +47,12 @@
     <Compile Include="Views\TodoItemPage.xaml.cs">
       <DependentUpon>TodoItemPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\TodoListPageCS.cs" />
-    <Compile Include="Views\TodoItemPageCS.cs" />
     <Compile Include="Data\TodoItemDatabase.cs" />
     <Compile Include="ITextToSpeech.cs" />
     <Compile Include="IFileHelper.cs" />
+    <Compile Include="Views\UpdateWallet.xaml.cs">
+      <DependentUpon>UpdateWallet.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <ItemGroup>
@@ -94,6 +95,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\TodoListPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\UpdateWallet.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

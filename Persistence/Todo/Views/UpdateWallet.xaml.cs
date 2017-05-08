@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Todo.Models;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace Todo.Views
+{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class UpdateWallet : ContentPage
+    {
+        public UpdateWallet()
+        {
+            InitializeComponent();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            // Reset the 'resume' id, since we just want to re-start here
+            ((App)App.Current).ResumeAtTodoId = -1;
+        }
+
+        async void OnUpdateClicked(object sender, EventArgs e)
+        {
+            var wallet = (Wallet)BindingContext;
+            await App.Database.SaveItemAsync(wallet);
+            await Navigation.PopAsync();
+
+        }
+    }
+}

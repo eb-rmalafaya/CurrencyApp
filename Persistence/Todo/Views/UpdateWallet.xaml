@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todo.Views.UpdateWallet">
+    <StackLayout Margin="20" VerticalOptions="StartAndExpand">
+        <Label Text="Value" />
+        <Entry Text="{Binding Quantity}" />
+        <Label Text="{Binding Symbol}"/>
+        <Button Text="Update" Clicked="OnUpdateClicked" />
+    </StackLayout>
+</ContentPage>
