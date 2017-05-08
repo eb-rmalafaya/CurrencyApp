@@ -73,7 +73,13 @@ namespace Todo.API
             return (symbolFrom.Price / symbolTo.Price) * qtd;
         }
 
-        public async Task<List<CurrencyDTO>> GetCurrenciesDTO()
+        public CurrenciesPackage GetCurrenciesPackage()
+        {
+            List<CurrencyDTO> list = GetCurrenciesDTO();
+            return new CurrenciesPackage(list);
+        }
+
+        public List<CurrencyDTO> GetCurrenciesDTO()
         {
             String response = GetAllCurrenciesSync();
             List<CurrencyDTO> list = new List<CurrencyDTO>();

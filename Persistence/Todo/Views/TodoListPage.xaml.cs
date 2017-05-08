@@ -32,6 +32,7 @@ namespace Todo
         async void OnRefresh(object sender, EventArgs e)
         {
             // atualizar currencies
+
             // mudar label
         }
 

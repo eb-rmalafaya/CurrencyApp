@@ -7,6 +7,7 @@ using Todo.Models;
 using System.Collections.Generic;
 using System.Net;
 using System.IO;
+using Todo.Utils;
 
 namespace TestingLab
 {
@@ -101,32 +102,54 @@ namespace TestingLab
             }
 
         }
-        
+
         [TestMethod]
-        public async Task ConvertTest()
+        public void ConvertTest()
         {
             APIHandler api = new APIHandler();
-            List<CurrencyDTO> list = await api.GetCurrenciesDTO();
+            List<CurrencyDTO> list = api.GetCurrenciesDTO();
             Double response = api.Convert("EUR", "USD", 1, list);
             Assert.IsTrue(response > 1);
         }
 
         [TestMethod]
-        public async Task ConvertTest2()
+        public void ConvertTest2()
         {
             APIHandler api = new APIHandler();
-            List<CurrencyDTO> list = await api.GetCurrenciesDTO();
+            List<CurrencyDTO> list = api.GetCurrenciesDTO();
             Double response = api.Convert("USD", "EUR", 1, list);
             Assert.IsTrue(response < 1);
         }
 
         [TestMethod]
-        public async Task ConvertTest3()
+        public void ConvertTest3()
         {
             APIHandler api = new APIHandler();
-            List<CurrencyDTO> list = await api.GetCurrenciesDTO();
+            List<CurrencyDTO> list = api.GetCurrenciesDTO();
             Double response = api.Convert("USD", "EUR", 1, list);
             Assert.IsTrue(response < 1);
+        }
+
+        [TestMethod]
+        public void GetCurrenciesPackage()
+        {
+            APIHandler api = new APIHandler();
+            CurrenciesPackage list = api.GetCurrenciesPackage();
+            Assert.IsNotNull(list);
+        }
+
+        [TestMethod]
+        public void GetCurrentDateString()
+        {
+            String nowDate = Utils.getCurrentDateString();
+            Assert.IsNotNull(nowDate);
+        }
+
+        [TestMethod]
+        public void GetCurrentTimestamp()
+        {
+            Int32 ts = Utils.getCurrentTimestamp();
+            Assert.IsNotNull(ts);
         }
     }
 }
