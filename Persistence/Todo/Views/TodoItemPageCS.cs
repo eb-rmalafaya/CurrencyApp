@@ -12,13 +12,10 @@ namespace Todo
 			var nameEntry = new Entry();
 			nameEntry.SetBinding(Entry.TextProperty, "Name");
 
-			var notesEntry = new Entry();
-			notesEntry.SetBinding(Entry.TextProperty, "Notes");
+			var symbolEntry = new Picker();
+            symbolEntry.SetBinding(Picker.SelectedItemProperty, "Currency");
 
-			var doneSwitch = new Switch();
-			doneSwitch.SetBinding(Switch.IsToggledProperty, "Done");
-
-			var saveButton = new Button { Text = "Save" };
+          	var saveButton = new Button { Text = "Save" };
 			saveButton.Clicked += async (sender, e) =>
 			{
 				var todoItem = (Wallet)BindingContext;
@@ -55,10 +52,8 @@ namespace Todo
 				{
 					new Label { Text = "Name" },
 					nameEntry,
-					new Label { Text = "Notes" },
-					notesEntry,
-					new Label { Text = "Done" },
-					doneSwitch,
+					new Picker(),
+                    symbolEntry,
 					saveButton,
 					deleteButton,
 					cancelButton,
