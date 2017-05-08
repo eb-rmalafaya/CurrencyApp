@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
-using System.Threading.Tasks;
 using Todo.API;
 using Todo.Models;
 using System.Collections.Generic;
@@ -126,17 +125,9 @@ namespace TestingLab
         {
             APIHandler api = new APIHandler();
             List<CurrencyDTO> list = api.GetCurrenciesDTO();
-            Double response = api.Convert("USD", "EUR", 1, list);
+            Double response = api.Convert("CHF", "EUR", 1, list);
             Assert.IsTrue(response < 1);
-        }
-
-        [TestMethod]
-        public void GetCurrenciesPackage()
-        {
-            APIHandler api = new APIHandler();
-            CurrenciesPackage list = api.GetCurrenciesPackage();
-            Assert.IsNotNull(list);
-        }
+        }       
 
         [TestMethod]
         public void GetCurrentDateString()

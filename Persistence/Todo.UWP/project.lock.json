@@ -2305,6 +2305,17 @@
           }
         }
       },
+      "Xam.Plugin.Connectivity/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.224": {
         "type": "package",
         "compile": {
@@ -4732,6 +4743,17 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Connectivity/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.224": {
@@ -7202,6 +7224,17 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.Connectivity/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.224": {
         "type": "package",
         "compile": {
@@ -9638,6 +9671,17 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Connectivity/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.224": {
@@ -12117,6 +12161,17 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.Plugin.Connectivity/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        }
+      },
       "Xamarin.Forms/2.3.4.224": {
         "type": "package",
         "compile": {
@@ -14553,6 +14608,17 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Connectivity/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.224": {
@@ -17030,6 +17096,17 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Xam.Plugin.Connectivity/2.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
+        },
+        "runtime": {
+          "lib/UAP10/Plugin.Connectivity.Abstractions.dll": {},
+          "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
       "Xamarin.Forms/2.3.4.224": {
@@ -23417,6 +23494,68 @@
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
     },
+    "Xam.Plugin.Connectivity/2.3.0": {
+      "sha512": "Lo9kX32BsI3t4Xsqgl2NPKp9INu577C1MH11tHUbw+kfV/1E+UKMgHjkDkDGO/bEzP/cXfCjAoPOVx1rIBO7uQ==",
+      "type": "package",
+      "path": "xam.plugin.connectivity/2.3.0",
+      "files": [
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.Abstractions.xml",
+        "lib/MonoAndroid10/Plugin.Connectivity.dll",
+        "lib/MonoAndroid10/Plugin.Connectivity.pdb",
+        "lib/MonoAndroid10/Plugin.Connectivity.xml",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.dll",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.pdb",
+        "lib/UAP10/Plugin.Connectivity.Abstractions.xml",
+        "lib/UAP10/Plugin.Connectivity.dll",
+        "lib/UAP10/Plugin.Connectivity.pdb",
+        "lib/UAP10/Plugin.Connectivity.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.xml",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.dll",
+        "lib/Xamarin.iOS10/Plugin.Connectivity.xml",
+        "lib/net45/Plugin.Connectivity.Abstractions.dll",
+        "lib/net45/Plugin.Connectivity.Abstractions.pdb",
+        "lib/net45/Plugin.Connectivity.Abstractions.xml",
+        "lib/net45/Plugin.Connectivity.dll",
+        "lib/net45/Plugin.Connectivity.pdb",
+        "lib/net45/Plugin.Connectivity.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Plugin.Connectivity.Abstractions.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Plugin.Connectivity.Abstractions.pdb",
+        "lib/portable-net45+wp80+win8+wpa81/Plugin.Connectivity.Abstractions.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Plugin.Connectivity.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Plugin.Connectivity.pdb",
+        "lib/portable-net45+wp80+win8+wpa81/Plugin.Connectivity.xml",
+        "lib/win8/Plugin.Connectivity.Abstractions.dll",
+        "lib/win8/Plugin.Connectivity.Abstractions.pdb",
+        "lib/win8/Plugin.Connectivity.Abstractions.xml",
+        "lib/win8/Plugin.Connectivity.dll",
+        "lib/win8/Plugin.Connectivity.pdb",
+        "lib/win8/Plugin.Connectivity.xml",
+        "lib/wp80/Plugin.Connectivity.Abstractions.dll",
+        "lib/wp80/Plugin.Connectivity.Abstractions.pdb",
+        "lib/wp80/Plugin.Connectivity.Abstractions.xml",
+        "lib/wp80/Plugin.Connectivity.dll",
+        "lib/wp80/Plugin.Connectivity.pdb",
+        "lib/wp80/Plugin.Connectivity.xml",
+        "lib/wp81/Plugin.Connectivity.Abstractions.dll",
+        "lib/wp81/Plugin.Connectivity.Abstractions.pdb",
+        "lib/wp81/Plugin.Connectivity.Abstractions.xml",
+        "lib/wp81/Plugin.Connectivity.dll",
+        "lib/wp81/Plugin.Connectivity.pdb",
+        "lib/wp81/Plugin.Connectivity.xml",
+        "lib/wpa81/Plugin.Connectivity.Abstractions.dll",
+        "lib/wpa81/Plugin.Connectivity.Abstractions.pdb",
+        "lib/wpa81/Plugin.Connectivity.Abstractions.xml",
+        "lib/wpa81/Plugin.Connectivity.dll",
+        "lib/wpa81/Plugin.Connectivity.pdb",
+        "lib/wpa81/Plugin.Connectivity.xml",
+        "readme.txt",
+        "xam.plugin.connectivity.2.3.0.nupkg.sha512",
+        "xam.plugin.connectivity.nuspec"
+      ]
+    },
     "Xamarin.Forms/2.3.4.224": {
       "sha512": "cjA3h83bCmnEjEYLcvi2n+rPc3rs3kuB/r5z5R/BFtBLp8kgV8AEImKBcYglsZ80uX3OSIVnPXN9lJ25GMGAmg==",
       "type": "package",
@@ -23583,26 +23722,27 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
+      "Xam.Plugin.Connectivity >= 2.3.0",
       "Xamarin.Forms >= 2.3.4.224",
       "sqlite-net-pcl >= 1.2.1"
     ],
     "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jlmgo\\.nuget\\packages\\": {}
+    "C:\\Users\\paulo\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
       "projectName": "Todo.UWP",
-      "projectPath": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\project.json",
+      "projectPath": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo.UWP\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo\\Todo.csproj": {
-              "projectPath": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo\\Todo.csproj"
+            "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo\\Todo.csproj": {
+              "projectPath": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo\\Todo.csproj"
             }
           }
         }
@@ -23611,6 +23751,7 @@
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
       "sqlite-net-pcl": "1.2.1",
+      "Xam.Plugin.Connectivity": "2.3.0",
       "Xamarin.Forms": "2.3.4.224"
     },
     "frameworks": {

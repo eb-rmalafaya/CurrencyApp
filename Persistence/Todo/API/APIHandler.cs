@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using Todo.Models;
 using Newtonsoft.Json.Linq;
 using System.Net;
@@ -16,7 +15,7 @@ namespace Todo.API
         public IAsyncResult GetAllCurrencies(AsyncCallback callback)
         {
             HTTPHandler client = new HTTPHandler();
-            if(callback ==null) return client.Get(API_URL_ALL, null);
+            if (callback == null) return client.Get(API_URL_ALL, null);
             var cb = new AsyncCallback(callback);
             return client.Get(API_URL_ALL, cb);
         }
@@ -71,13 +70,7 @@ namespace Todo.API
         public Double Convert(CurrencyDTO symbolFrom, CurrencyDTO symbolTo, Double qtd)
         {
             return (symbolFrom.Price / symbolTo.Price) * qtd;
-        }
-
-        public CurrenciesPackage GetCurrenciesPackage()
-        {
-            List<CurrencyDTO> list = GetCurrenciesDTO();
-            return new CurrenciesPackage(list);
-        }
+        }        
 
         public List<CurrencyDTO> GetCurrenciesDTO()
         {
