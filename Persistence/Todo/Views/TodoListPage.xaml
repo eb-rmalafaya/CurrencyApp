@@ -8,16 +8,28 @@
 				<OnPlatform x:TypeArguments="FileImageSource" WinPhone="add.png" Android="plus.png" />
 			</ToolbarItem.Icon>
 		</ToolbarItem>
-	</ContentPage.ToolbarItems>
-	<ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
-		<ListView.ItemTemplate>
-			<DataTemplate>
-				<ViewCell>
-					<StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                        <Label Text="{Binding Print}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-					</StackLayout>
-				</ViewCell>
-			</DataTemplate>
-		</ListView.ItemTemplate>
-	</ListView>
+        <ToolbarItem Text="Refresh" Clicked="OnRefresh">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" WinPhone="refresh.png" Android="refresh.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <Frame>
+        <StackLayout>
+            <Label BackgroundColor="#d9d9d9" TextColor="#47525E" 
+                   XAlign="Center"  FontSize="Micro"
+                   Text="Last Update: 6/05/2017 20:00:35" />
+            <ListView x:Name="listView" Margin="20" ItemSelected="OnListItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Print}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </Frame>
 </ContentPage>

@@ -29,7 +29,13 @@ namespace Todo
 			});
 		}
 
-		async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
+        async void OnRefresh(object sender, EventArgs e)
+        {
+            // atualizar currencies
+            // mudar label
+        }
+
+        async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
 			((App)App.Current).ResumeAtTodoId = (e.SelectedItem as Wallet).ID;
 			Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as Wallet).ID);
