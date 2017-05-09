@@ -64,9 +64,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\Todo.csproj">
+    <ProjectReference Include="..\Todo\CurrencyApp.csproj">
       <Project>{5f610ea1-9e35-4870-ae9b-5e18b4b4d5b8}</Project>
-      <Name>Todo</Name>
+      <Name>CurrencyApp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

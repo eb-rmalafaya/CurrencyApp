@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Todo.Models;
+using CurrencyApp.Models;
 using Xamarin.Forms;
 
-namespace Todo
+namespace CurrencyApp
 {
-	public partial class TodoItemPage : ContentPage
+	public partial class CurrencyAppItemPage : ContentPage
 	{
-		public TodoItemPage()
+		public CurrencyAppItemPage()
 		{
 			InitializeComponent();
 		}
@@ -15,14 +15,14 @@ namespace Todo
 		async void OnSaveClicked(object sender, EventArgs e)
 		{
             bool entered = false;
-            var todoItem = (Wallet)BindingContext;
+            var CurrencyAppItem = (Wallet)BindingContext;
             List<Wallet> wallets = await App.Database.GetItemsAsync();
             Wallet wallet = new Wallet();
             if (wallets.Count > 0)
             {
                 foreach (Wallet w in wallets)
                 {
-                    if (w.Symbol.Equals(todoItem.Symbol))
+                    if (w.Symbol.Equals(CurrencyAppItem.Symbol))
                     {
                         wallet = w;
                         entered = true;
@@ -31,18 +31,18 @@ namespace Todo
                 }
                 if (entered == true)
                 {
-                    wallet.Quantity = wallet.Quantity + todoItem.Quantity;
+                    wallet.Quantity = wallet.Quantity + CurrencyAppItem.Quantity;
                     await App.Database.SaveItemAsync(wallet);
                 }
                 else
                 {
-                    await App.Database.SaveItemAsync(todoItem);
+                    await App.Database.SaveItemAsync(CurrencyAppItem);
                 }
                 
             }
             else
             {
-                await App.Database.SaveItemAsync(todoItem);
+                await App.Database.SaveItemAsync(CurrencyAppItem);
             }
             
 			await Navigation.PopAsync();
@@ -55,8 +55,8 @@ namespace Todo
 
 		void OnSpeakClicked(object sender, EventArgs e)
 		{
-			var todoItem = (Wallet)BindingContext;
-			DependencyService.Get<ITextToSpeech>().Speak(todoItem.Quantity + " " + todoItem.Symbol);
+			var CurrencyAppItem = (Wallet)BindingContext;
+			DependencyService.Get<ITextToSpeech>().Speak(CurrencyAppItem.Quantity + " " + CurrencyAppItem.Symbol);
 		}
 	}
 }

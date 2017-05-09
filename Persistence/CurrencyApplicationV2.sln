@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo", "Todo\Todo.csproj", "{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyApp", "Todo\CurrencyApp.csproj", "{5F610EA1-9E35-4870-AE9B-5E18B4B4D5B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Targets", "Targets", "{205F34F1-DBEC-46B8-A6E5-7C2BAB70DD0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.Android", "Todo.Android\Todo.Android.csproj", "{B746C87C-7335-4830-AAE2-ACACE4D69DB5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyApp.Android", "Todo.Android\CurrencyApp.Android.csproj", "{B746C87C-7335-4830-AAE2-ACACE4D69DB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Todo.UWP", "Todo.UWP\Todo.UWP.csproj", "{346CF235-BDD4-4557-9BAB-4F5E4A9BD962}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyApp.UWP", "Todo.UWP\CurrencyApp.UWP.csproj", "{346CF235-BDD4-4557-9BAB-4F5E4A9BD962}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Tests", "TestingLab\Unit Tests.csproj", "{ED7B9F28-F7B6-4041-9DC7-215A95A02D32}"
 EndProject

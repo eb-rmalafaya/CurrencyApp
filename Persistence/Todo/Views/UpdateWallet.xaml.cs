@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Todo.Models;
+using CurrencyApp.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Todo.Views
+namespace CurrencyApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdateWallet : ContentPage
@@ -21,7 +21,7 @@ namespace Todo.Views
         {
             base.OnAppearing();
             // Reset the 'resume' id, since we just want to re-start here
-            ((App)App.Current).ResumeAtTodoId = -1;
+            ((App)App.Current).ResumeAtCurrencyAppId = -1;
         }
 
         async void OnUpdateClicked(object sender, EventArgs e)
@@ -34,8 +34,8 @@ namespace Todo.Views
 
         async void OnDeleteClicked(object sender, EventArgs e)
         {
-            var todoItem = (Wallet)BindingContext;
-            await App.Database.DeleteItemAsync(todoItem);
+            var CurrencyAppItem = (Wallet)BindingContext;
+            await App.Database.DeleteItemAsync(CurrencyAppItem);
             await Navigation.PopAsync();
         }
 
@@ -46,8 +46,8 @@ namespace Todo.Views
 
         void OnSpeakClicked(object sender, EventArgs e)
         {
-            var todoItem = (Wallet)BindingContext;
-            DependencyService.Get<ITextToSpeech>().Speak(todoItem.Quantity + " " + todoItem.Symbol);
+            var CurrencyAppItem = (Wallet)BindingContext;
+            DependencyService.Get<ITextToSpeech>().Speak(CurrencyAppItem.Quantity + " " + CurrencyAppItem.Symbol);
         }
     }
 }

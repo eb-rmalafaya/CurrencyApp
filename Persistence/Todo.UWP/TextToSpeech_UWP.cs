@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
-using Todo.UWP;
+using CurrencyApp.UWP;
 using Windows.Media.SpeechSynthesis;
 using Windows.UI.Xaml.Controls;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(TextToSpeech_UWP))]
-namespace Todo.UWP
+namespace CurrencyApp.UWP
 {
 	public class TextToSpeech_UWP : ITextToSpeech
 	{

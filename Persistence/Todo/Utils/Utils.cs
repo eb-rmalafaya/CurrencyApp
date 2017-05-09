@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Todo.Utils
+namespace CurrencyApp.Utils
 {
     public class Utils
     {

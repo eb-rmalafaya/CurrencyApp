@@ -1,4 +1,4 @@
-﻿namespace Todo
+﻿namespace CurrencyApp
 {
 	public interface ITextToSpeech
 	{

@@ -14,7 +14,7 @@
   <mp:PhoneIdentity PhoneProductId="80dc8f21-9811-4330-adca-4430776cba02" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Todo.UWP</DisplayName>
+    <DisplayName>CurrencyApp.UWP</DisplayName>
     <PublisherDisplayName>Craig</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
@@ -30,12 +30,12 @@
   <Applications>
     <Application Id="App"
       Executable="$targetnametoken$.exe"
-      EntryPoint="Todo.UWP.App">
+      EntryPoint="CurrencyApp.UWP.App">
       <uap:VisualElements
-        DisplayName="Todo.UWP"
+        DisplayName="CurrencyApp.UWP"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="Todo.UWP"
+        Description="CurrencyApp.UWP"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />

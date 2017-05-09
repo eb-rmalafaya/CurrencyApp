@@ -7,8 +7,8 @@
     <ProjectGuid>{346CF235-BDD4-4557-9BAB-4F5E4A9BD962}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Todo.UWP</RootNamespace>
-    <AssemblyName>Todo.UWP</AssemblyName>
+    <RootNamespace>CurrencyApp.UWP</RootNamespace>
+    <AssemblyName>CurrencyApp.UWP</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.10240.0</TargetPlatformVersion>
@@ -132,9 +132,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Todo\Todo.csproj">
+    <ProjectReference Include="..\Todo\CurrencyApp.csproj">
       <Project>{5f610ea1-9e35-4870-ae9b-5e18b4b4d5b8}</Project>
-      <Name>Todo</Name>
+      <Name>CurrencyApp</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

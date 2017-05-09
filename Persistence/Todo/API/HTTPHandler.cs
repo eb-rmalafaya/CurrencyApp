@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace Todo.API
+namespace CurrencyApp.API
 {
     class HTTPHandler : IHTTPHandler
     {

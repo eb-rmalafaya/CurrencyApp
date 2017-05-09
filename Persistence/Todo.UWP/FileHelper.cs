@@ -1,10 +1,10 @@
 ﻿using System.IO;
 using Xamarin.Forms;
-using Todo.UWP;
+using CurrencyApp.UWP;
 using Windows.Storage;
 
 [assembly: Dependency(typeof(FileHelper))]
-namespace Todo.UWP
+namespace CurrencyApp.UWP
 {
 	public class FileHelper : IFileHelper
 	{

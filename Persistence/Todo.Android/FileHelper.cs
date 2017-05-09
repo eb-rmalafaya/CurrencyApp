@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using Xamarin.Forms;
-using Todo.Droid;
+using CurrencyApp.Droid;
 
 [assembly: Dependency(typeof(FileHelper))]
-namespace Todo.Droid
+namespace CurrencyApp.Droid
 {
 	public class FileHelper : IFileHelper
 	{

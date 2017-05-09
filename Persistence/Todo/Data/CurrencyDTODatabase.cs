@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLite;
-using Todo.Models;
+using CurrencyApp.Models;
 using System;
 
-namespace Todo.Data
+namespace CurrencyApp.Data
 {
     public class CurrencyDTODatabase
     {

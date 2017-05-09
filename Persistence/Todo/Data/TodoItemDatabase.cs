@@ -1,15 +1,15 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLite;
-using Todo.Models;
+using CurrencyApp.Models;
 
-namespace Todo
+namespace CurrencyApp
 {
-	public class TodoItemDatabase
+	public class CurrencyAppItemDatabase
 	{
 		readonly SQLiteAsyncConnection database;
 
-		public TodoItemDatabase(string dbPath)
+		public CurrencyAppItemDatabase(string dbPath)
 		{
 			database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<Wallet>().Wait();

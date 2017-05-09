@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="Todo.TodoItemPage" Title="{Binding Quantity} + {Binding Symbol}">
+             x:Class="CurrencyApp.CurrencyAppItemPage" Title="{Binding Quantity} + {Binding Symbol}">
 	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
 		<Label Text="Value" />
 		<Entry Text="{Binding Quantity}" />

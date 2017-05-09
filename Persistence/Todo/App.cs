@@ -2,14 +2,14 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Diagnostics;
-using Todo.Data;
+using CurrencyApp.Data;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-namespace Todo
+namespace CurrencyApp
 {
 	public class App : Application
 	{
-		static TodoItemDatabase database;
+		static CurrencyAppItemDatabase database;
         static CurrencyDTODatabase databaseCurrencies;
 
         public App()
@@ -18,26 +18,26 @@ namespace Todo
 			Resources.Add("primaryDarkGrey", Color.FromHex("47525E"));
 			Resources.Add("primaryWhiteGrey", Color.FromHex("F0F0F0"));
 
-			var nav = new NavigationPage(new TodoListPage());
+			var nav = new NavigationPage(new CurrencyAppListPage());
 			nav.BarBackgroundColor = (Color)App.Current.Resources["primaryDarkGrey"];
 			nav.BarTextColor = Color.White;
             nav.BackgroundColor = (Color)App.Current.Resources["primaryWhiteGrey"];
             MainPage = nav;
 		}
 
-		public static TodoItemDatabase Database
+		public static CurrencyAppItemDatabase Database
 		{
 			get
 			{
 				if (database == null)
 				{
-					database = new TodoItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+					database = new CurrencyAppItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("CurrencyAppSQLite.db3"));
 				}
 				return database;
 			}
 		}
 
-		public int ResumeAtTodoId { get; set; }
+		public int ResumeAtCurrencyAppId { get; set; }
 
         public static CurrencyDTODatabase DatabaseCurrencies
         {
@@ -45,7 +45,7 @@ namespace Todo
             {
                 if (databaseCurrencies == null)
                 {
-                    databaseCurrencies = new CurrencyDTODatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+                    databaseCurrencies = new CurrencyDTODatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("CurrencyAppSQLite.db3"));
                 }
                 return databaseCurrencies;
             }

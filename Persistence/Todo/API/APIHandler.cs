@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Todo.Models;
+using CurrencyApp.Models;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.IO;
 
-namespace Todo.API
+namespace CurrencyApp.API
 {
     public class APIHandler
     {

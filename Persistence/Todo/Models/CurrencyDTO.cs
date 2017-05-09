@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using SQLite;
-namespace Todo.Models
+namespace CurrencyApp.Models
 {
     public class CurrencyDTO
     {

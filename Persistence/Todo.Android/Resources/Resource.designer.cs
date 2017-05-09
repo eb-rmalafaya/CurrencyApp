@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Todo.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("CurrencyApp.Resource", IsApplication=true)]
 
-namespace Todo
+namespace CurrencyApp
 {
 	
 	
@@ -26,7 +26,7 @@ namespace Todo
 		
 		public static void UpdateIdValues()
 		{
-			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::Todo.Resource.Attribute.actionBarSize;
+			global::Xamarin.Forms.Platform.Android.Resource.Attribute.actionBarSize = global::CurrencyApp.Resource.Attribute.actionBarSize;
 		}
 		
 		public partial class Animation
@@ -2206,14 +2206,17 @@ namespace Todo
 			// aapt resource value: 0x7f0200a2
 			public const int mr_ic_play_light = 2130837666;
 			
-			// aapt resource value: 0x7f0200a5
-			public const int notification_template_icon_bg = 2130837669;
+			// aapt resource value: 0x7f0200a6
+			public const int notification_template_icon_bg = 2130837670;
 			
 			// aapt resource value: 0x7f0200a3
 			public const int plus = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
 			public const int refresh = 2130837668;
+			
+			// aapt resource value: 0x7f0200a5
+			public const int refreshWhite = 2130837669;
 			
 			static Drawable()
 			{
@@ -3860,6 +3863,9 @@ namespace Todo
 			// aapt resource value: 0x7f0b010d
 			public const int Theme_AppCompat_NoActionBar = 2131427597;
 			
+			// aapt resource value: 0x7f0b0172
+			public const int Theme_CurrencyApp = 2131427698;
+			
 			// aapt resource value: 0x7f0b0163
 			public const int Theme_Design = 2131427683;
 			
@@ -3889,9 +3895,6 @@ namespace Todo
 			
 			// aapt resource value: 0x7f0b0003
 			public const int Theme_MediaRouter_LightControlPanel = 2131427331;
-			
-			// aapt resource value: 0x7f0b0172
-			public const int Theme_Todo = 2131427698;
 			
 			// aapt resource value: 0x7f0b010e
 			public const int ThemeOverlay_AppCompat = 2131427598;

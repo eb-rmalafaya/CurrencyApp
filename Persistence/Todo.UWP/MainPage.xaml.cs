@@ -1,4 +1,4 @@
-﻿namespace Todo.UWP
+﻿namespace CurrencyApp.UWP
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -8,7 +8,7 @@
         public MainPage()
         {
             this.InitializeComponent();
-            LoadApplication(new Todo.App());
+            LoadApplication(new CurrencyApp.App());
         }
     }
 }

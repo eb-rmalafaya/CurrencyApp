@@ -2334,7 +2334,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "Todo/1.0.0": {
+      "CurrencyApp/1.0.0": {
         "type": "project"
       }
     },
@@ -4774,7 +4774,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "Todo/1.0.0": {
+      "CurrencyApp/1.0.0": {
         "type": "project"
       }
     },
@@ -7253,7 +7253,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "Todo/1.0.0": {
+      "CurrencyApp/1.0.0": {
         "type": "project"
       }
     },
@@ -9702,7 +9702,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "Todo/1.0.0": {
+      "CurrencyApp/1.0.0": {
         "type": "project"
       }
     },
@@ -12190,7 +12190,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "Todo/1.0.0": {
+      "CurrencyApp/1.0.0": {
         "type": "project"
       }
     },
@@ -14639,7 +14639,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "Todo/1.0.0": {
+      "CurrencyApp/1.0.0": {
         "type": "project"
       }
     },
@@ -17127,7 +17127,7 @@
           "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.targets": {}
         }
       },
-      "Todo/1.0.0": {
+      "CurrencyApp/1.0.0": {
         "type": "project"
       }
     }
@@ -23713,10 +23713,10 @@
         "lib/wpa81/Xamarin.Forms.Xaml.xml"
       ]
     },
-    "Todo/1.0.0": {
+    "CurrencyApp/1.0.0": {
       "type": "project",
-      "path": "../Todo/Todo.csproj",
-      "msbuildProject": "../Todo/Todo.csproj"
+      "path": "../Todo/CurrencyApp.csproj",
+      "msbuildProject": "../Todo/CurrencyApp.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -23729,20 +23729,20 @@
     "UAP,Version=v10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\paulo\\.nuget\\packages\\": {}
+    "C:\\Users\\jlmgo\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
-      "projectName": "Todo.UWP",
-      "projectPath": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo.UWP\\Todo.UWP.csproj",
-      "projectJsonPath": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo.UWP\\project.json",
+      "projectUniqueName": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\CurrencyApp.UWP.csproj",
+      "projectName": "CurrencyApp.UWP",
+      "projectPath": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\CurrencyApp.UWP.csproj",
+      "projectJsonPath": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo.UWP\\project.json",
       "projectStyle": "ProjectJson",
       "frameworks": {
         "uap10.0": {
           "projectReferences": {
-            "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo\\Todo.csproj": {
-              "projectPath": "C:\\Users\\paulo\\Desktop\\CurrencyApp\\Persistence\\Todo\\Todo.csproj"
+            "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo\\CurrencyApp.csproj": {
+              "projectPath": "C:\\Users\\jlmgo\\Documents\\Projects\\CM\\CurrencyApp\\Persistence\\Todo\\CurrencyApp.csproj"
             }
           }
         }

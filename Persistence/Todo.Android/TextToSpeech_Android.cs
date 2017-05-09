@@ -2,10 +2,10 @@
 using Xamarin.Forms;
 using System.Collections.Generic;
 using Java.Lang;
-using Todo;
+using CurrencyApp;
 
 [assembly: Dependency(typeof(TextToSpeech_Android))]
-namespace Todo
+namespace CurrencyApp
 {
 	public class TextToSpeech_Android : Object, ITextToSpeech, TextToSpeech.IOnInitListener
 	{

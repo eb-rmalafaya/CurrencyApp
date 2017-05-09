@@ -1,12 +1,12 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Newtonsoft.Json.Linq;
-using Todo.API;
-using Todo.Models;
+using CurrencyApp.API;
+using CurrencyApp.Models;
 using System.Collections.Generic;
 using System.Net;
 using System.IO;
-using Todo.Utils;
+using CurrencyApp.Utils;
 
 namespace TestingLab
 {

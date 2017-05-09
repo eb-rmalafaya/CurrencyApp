@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace Todo.UWP
+namespace CurrencyApp.UWP
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -60,7 +60,7 @@ namespace Todo.UWP
                 Xamarin.Forms.Forms.Init(e);
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
-                    //TODO: Load state from previously suspended application
+                    //CurrencyApp: Load state from previously suspended application
                 }
 
                 // Place the frame in the current Window
@@ -98,7 +98,7 @@ namespace Todo.UWP
         private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-            //TODO: Save application state and stop any background activity
+            //CurrencyApp: Save application state and stop any background activity
             deferral.Complete();
         }
     }

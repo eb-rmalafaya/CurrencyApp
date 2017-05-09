@@ -1,16 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using Todo.API;
-using Todo.Models;
-using Todo.Views;
+using CurrencyApp.API;
+using CurrencyApp.Models;
+using CurrencyApp.Views;
 using Xamarin.Forms;
 
-namespace Todo
+namespace CurrencyApp
 {
-	public partial class TodoListPage : ContentPage
+	public partial class CurrencyAppListPage : ContentPage
 	{
-        public TodoListPage()
+        public CurrencyAppListPage()
         {
             InitializeComponent();
         }
@@ -20,7 +20,7 @@ namespace Todo
             base.OnAppearing();
 
             // Reset the 'resume' id, since we just want to re-start here
-            ((App)App.Current).ResumeAtTodoId = -1;
+            ((App)App.Current).ResumeAtCurrencyAppId = -1;
             listView.ItemsSource = await App.Database.GetItemsAsync();
             refreshLabel.Text = "Last Update: " + await App.DatabaseCurrencies.GetLastUpdateTimeString();
 
@@ -28,7 +28,7 @@ namespace Todo
 
         async void OnItemAdded(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TodoItemPage
+            await Navigation.PushAsync(new CurrencyAppItemPage
             {
                 BindingContext = new Wallet()
             });
@@ -71,8 +71,8 @@ namespace Todo
 
         async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
 		{
-			((App)App.Current).ResumeAtTodoId = (e.SelectedItem as Wallet).ID;
-			Debug.WriteLine("setting ResumeAtTodoId = " + (e.SelectedItem as Wallet).ID);
+			((App)App.Current).ResumeAtCurrencyAppId = (e.SelectedItem as Wallet).ID;
+			Debug.WriteLine("setting ResumeAtCurrencyAppId = " + (e.SelectedItem as Wallet).ID);
             Wallet w = (e.SelectedItem as Wallet);
 
             
