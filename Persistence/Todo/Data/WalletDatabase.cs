@@ -5,11 +5,11 @@ using CurrencyApp.Models;
 
 namespace CurrencyApp
 {
-	public class CurrencyAppItemDatabase
+	public class WalletDatabase
 	{
 		readonly SQLiteAsyncConnection database;
 
-		public CurrencyAppItemDatabase(string dbPath)
+		public WalletDatabase(string dbPath)
 		{
 			database = new SQLiteAsyncConnection(dbPath);
             database.CreateTableAsync<Wallet>().Wait();

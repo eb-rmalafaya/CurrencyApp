@@ -9,7 +9,7 @@ namespace CurrencyApp
 {
 	public class App : Application
 	{
-		static CurrencyAppItemDatabase database;
+		static WalletDatabase database;
         static CurrencyDTODatabase databaseCurrencies;
 
         public App()
@@ -25,13 +25,13 @@ namespace CurrencyApp
             MainPage = nav;
 		}
 
-		public static CurrencyAppItemDatabase Database
+		public static WalletDatabase Database
 		{
 			get
 			{
 				if (database == null)
 				{
-					database = new CurrencyAppItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("CurrencyAppSQLite.db3"));
+					database = new WalletDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("CurrencyAppSQLite.db3"));
 				}
 				return database;
 			}
