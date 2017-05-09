@@ -2,8 +2,9 @@
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "sqlite-net-pcl": "1.2.1",
+    "Xam.FormsPlugin.CrossPieChart": "2.1.15",
     "Xam.Plugin.Connectivity": "2.3.0",
-    "Xamarin.Forms": "2.3.4.224"
+    "Xamarin.Forms": "2.3.4.231"
   },
   "frameworks": {
     "uap10.0": {}

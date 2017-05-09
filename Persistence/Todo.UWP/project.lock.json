@@ -2305,6 +2305,15 @@
           }
         }
       },
+      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -2316,7 +2325,7 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.231": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -4745,6 +4754,15 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -4756,7 +4774,7 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.231": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -7224,6 +7242,15 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -7235,7 +7262,7 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.231": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -9673,6 +9700,15 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -9684,7 +9720,7 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.231": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -12161,6 +12197,15 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -12172,7 +12217,7 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.231": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -14610,6 +14655,15 @@
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -14621,7 +14675,7 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.231": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -17098,6 +17152,15 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+        "type": "package",
+        "compile": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
+        }
+      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -17109,7 +17172,7 @@
           "lib/UAP10/Plugin.Connectivity.dll": {}
         }
       },
-      "Xamarin.Forms/2.3.4.224": {
+      "Xamarin.Forms/2.3.4.231": {
         "type": "package",
         "compile": {
           "lib/uap10.0/Xamarin.Forms.Core.dll": {},
@@ -23494,6 +23557,27 @@
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
     },
+    "Xam.FormsPlugin.CrossPieChart/2.1.15": {
+      "sha512": "YPsWUk1U2iqrBzaUq3ikevLB9NJj5y1/YSLqnOna4RGaiYEckc+6CBS03mpFd6/7GQFkRe4+hN1LbJw4wbvTRw==",
+      "type": "package",
+      "path": "xam.formsplugin.crosspiechart/2.1.15",
+      "files": [
+        "content/MonoAndroid10/CrossPieCharts/CrossPieChartsRenderer.cs",
+        "content/Xamarin.iOS10/CrossPieCharts/CrossPieChartsRenderer.cs",
+        "content/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/CrossPieCharts/CrossPieChartsSample.cs",
+        "content/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/CrossPieCharts/CrossPieChartsView.cs",
+        "content/win81/CrossPieCharts/CrossPieChartsRenderer.cs",
+        "content/win81/CrossPieCharts/PieChart.cs",
+        "content/wp8/CrossPieCharts/CrossPieChartsRenderer.cs",
+        "content/wp8/CrossPieCharts/PieChart.cs",
+        "content/wpa81/CrossPieCharts/CrossPieChartsRenderer.cs",
+        "content/wpa81/CrossPieCharts/PieChart.cs",
+        "lib/MonoAndroid10/com.refractored.monodroidtoolkit.dll",
+        "lib/uap/CrossPieCharts.ClassLibrary.dll",
+        "xam.formsplugin.crosspiechart.2.1.15.nupkg.sha512",
+        "xam.formsplugin.crosspiechart.nuspec"
+      ]
+    },
     "Xam.Plugin.Connectivity/2.3.0": {
       "sha512": "Lo9kX32BsI3t4Xsqgl2NPKp9INu577C1MH11tHUbw+kfV/1E+UKMgHjkDkDGO/bEzP/cXfCjAoPOVx1rIBO7uQ==",
       "type": "package",
@@ -23556,13 +23640,11 @@
         "xam.plugin.connectivity.nuspec"
       ]
     },
-    "Xamarin.Forms/2.3.4.224": {
-      "sha512": "cjA3h83bCmnEjEYLcvi2n+rPc3rs3kuB/r5z5R/BFtBLp8kgV8AEImKBcYglsZ80uX3OSIVnPXN9lJ25GMGAmg==",
+    "Xamarin.Forms/2.3.4.231": {
+      "sha512": "Tar4nHke8Rl0Mz2Y1MdNAMvo8wKc/wVVW2rN7loXMc+2R1ex3n/fzs7eD2F7gDw3TceGLQku52kyc5LuN8Hlgw==",
       "type": "package",
-      "path": "xamarin.forms/2.3.4.224",
+      "path": "xamarin.forms/2.3.4.231",
       "files": [
-        "Xamarin.Forms.2.3.4.224.nupkg.sha512",
-        "Xamarin.Forms.nuspec",
         "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Mono.Cecil.Mdb.dll",
         "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Mono.Cecil.Pdb.dll",
         "build/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Mono.Cecil.Rocks.dll",
@@ -23650,6 +23732,7 @@
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Core.pdb",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Core.xml",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Platform.dll",
+        "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Platform.dll.mdb",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Platform.pdb",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Xaml.dll",
         "lib/portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20/Xamarin.Forms.Xaml.dll.mdb",
@@ -23710,7 +23793,9 @@
         "lib/wpa81/Xamarin.Forms.Platform.WinRT/Xamarin.Forms.Platform.WinRT.xr.xml",
         "lib/wpa81/Xamarin.Forms.Platform.dll",
         "lib/wpa81/Xamarin.Forms.Xaml.dll",
-        "lib/wpa81/Xamarin.Forms.Xaml.xml"
+        "lib/wpa81/Xamarin.Forms.Xaml.xml",
+        "xamarin.forms.2.3.4.231.nupkg.sha512",
+        "xamarin.forms.nuspec"
       ]
     },
     "CurrencyApp/1.0.0": {
@@ -23722,8 +23807,9 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
+      "Xam.FormsPlugin.CrossPieChart >= 2.1.15",
       "Xam.Plugin.Connectivity >= 2.3.0",
-      "Xamarin.Forms >= 2.3.4.224",
+      "Xamarin.Forms >= 2.3.4.231",
       "sqlite-net-pcl >= 1.2.1"
     ],
     "UAP,Version=v10.0": []
@@ -23751,8 +23837,9 @@
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
       "sqlite-net-pcl": "1.2.1",
+      "Xam.FormsPlugin.CrossPieChart": "2.1.15",
       "Xam.Plugin.Connectivity": "2.3.0",
-      "Xamarin.Forms": "2.3.4.224"
+      "Xamarin.Forms": "2.3.4.231"
     },
     "frameworks": {
       "uap10.0": {}
