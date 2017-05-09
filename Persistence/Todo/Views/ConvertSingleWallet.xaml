@@ -2,6 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CurrencyApp.Views.ConvertSingleWallet">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Refresh" Clicked="OnRefresh">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource" WinPhone="refresh.png" Android="refreshWhite.png" />
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <StackLayout Margin="20" VerticalOptions="StartAndExpand">
         <Label Text="Value" />
         <Entry Text="{Binding Quantity}" Keyboard="Numeric" />

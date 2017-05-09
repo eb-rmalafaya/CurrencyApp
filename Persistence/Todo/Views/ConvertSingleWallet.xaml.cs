@@ -42,5 +42,31 @@ namespace CurrencyApp.Views
             await APIHandler.Convert(currencyAppItem.Symbol, toSymbol, currencyAppItem, selectedQuantity);
             await Navigation.PopToRootAsync();
         }
+
+        async void OnRefresh(object sender, EventArgs e)
+        {
+            if (Utils.Utils.hasInternetAccess())
+            {
+                // atualizar currencies
+                try
+                {
+                    APIHandler api = new APIHandler();
+                    api.UpdateCurrencies();
+                    return;
+                }
+                catch (Exception exception)
+                {
+                    // show dialog
+                    //await DisplayAlert("Warning", "The API is currently unavailable. Please Try Again", "OK");
+                }
+            }
+            else
+            {
+                // no internet show access
+                await DisplayAlert("Warning", "No Internet Access. Please Connect to the Internet.", "OK");
+            }
+
+        }
+
     }
 }
