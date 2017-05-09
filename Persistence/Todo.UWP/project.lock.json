@@ -2305,15 +2305,6 @@
           }
         }
       },
-      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-        "type": "package",
-        "compile": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        }
-      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -4752,15 +4743,6 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-        "type": "package",
-        "compile": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
         }
       },
       "Xam.Plugin.Connectivity/2.3.0": {
@@ -7242,15 +7224,6 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-        "type": "package",
-        "compile": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        }
-      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -9698,15 +9671,6 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-        "type": "package",
-        "compile": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
         }
       },
       "Xam.Plugin.Connectivity/2.3.0": {
@@ -12197,15 +12161,6 @@
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-        "type": "package",
-        "compile": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        }
-      },
       "Xam.Plugin.Connectivity/2.3.0": {
         "type": "package",
         "compile": {
@@ -14653,15 +14608,6 @@
         },
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-        "type": "package",
-        "compile": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
         }
       },
       "Xam.Plugin.Connectivity/2.3.0": {
@@ -17150,15 +17096,6 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-        "type": "package",
-        "compile": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
-        },
-        "runtime": {
-          "lib/uap/CrossPieCharts.ClassLibrary.dll": {}
         }
       },
       "Xam.Plugin.Connectivity/2.3.0": {
@@ -23557,27 +23494,6 @@
         "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
     },
-    "Xam.FormsPlugin.CrossPieChart/2.1.15": {
-      "sha512": "YPsWUk1U2iqrBzaUq3ikevLB9NJj5y1/YSLqnOna4RGaiYEckc+6CBS03mpFd6/7GQFkRe4+hN1LbJw4wbvTRw==",
-      "type": "package",
-      "path": "xam.formsplugin.crosspiechart/2.1.15",
-      "files": [
-        "content/MonoAndroid10/CrossPieCharts/CrossPieChartsRenderer.cs",
-        "content/Xamarin.iOS10/CrossPieCharts/CrossPieChartsRenderer.cs",
-        "content/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/CrossPieCharts/CrossPieChartsSample.cs",
-        "content/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10/CrossPieCharts/CrossPieChartsView.cs",
-        "content/win81/CrossPieCharts/CrossPieChartsRenderer.cs",
-        "content/win81/CrossPieCharts/PieChart.cs",
-        "content/wp8/CrossPieCharts/CrossPieChartsRenderer.cs",
-        "content/wp8/CrossPieCharts/PieChart.cs",
-        "content/wpa81/CrossPieCharts/CrossPieChartsRenderer.cs",
-        "content/wpa81/CrossPieCharts/PieChart.cs",
-        "lib/MonoAndroid10/com.refractored.monodroidtoolkit.dll",
-        "lib/uap/CrossPieCharts.ClassLibrary.dll",
-        "xam.formsplugin.crosspiechart.2.1.15.nupkg.sha512",
-        "xam.formsplugin.crosspiechart.nuspec"
-      ]
-    },
     "Xam.Plugin.Connectivity/2.3.0": {
       "sha512": "Lo9kX32BsI3t4Xsqgl2NPKp9INu577C1MH11tHUbw+kfV/1E+UKMgHjkDkDGO/bEzP/cXfCjAoPOVx1rIBO7uQ==",
       "type": "package",
@@ -23807,7 +23723,6 @@
   "projectFileDependencyGroups": {
     "": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 5.2.2",
-      "Xam.FormsPlugin.CrossPieChart >= 2.1.15",
       "Xam.Plugin.Connectivity >= 2.3.0",
       "Xamarin.Forms >= 2.3.4.231",
       "sqlite-net-pcl >= 1.2.1"
@@ -23837,7 +23752,6 @@
     "dependencies": {
       "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
       "sqlite-net-pcl": "1.2.1",
-      "Xam.FormsPlugin.CrossPieChart": "2.1.15",
       "Xam.Plugin.Connectivity": "2.3.0",
       "Xamarin.Forms": "2.3.4.231"
     },

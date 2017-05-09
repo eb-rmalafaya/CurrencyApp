@@ -8,8 +8,8 @@ using Xamarin.Forms;
 
 namespace CurrencyApp
 {
-	public partial class CurrencyAppListPage : ContentPage
-	{
+    public partial class CurrencyAppListPage : ContentPage
+    {
         public CurrencyAppListPage()
         {
             InitializeComponent();
@@ -70,18 +70,26 @@ namespace CurrencyApp
         }
 
         async void OnListItemSelected(object sender, SelectedItemChangedEventArgs e)
-		{
-			((App)App.Current).ResumeAtCurrencyAppId = (e.SelectedItem as Wallet).ID;
-			Debug.WriteLine("setting ResumeAtCurrencyAppId = " + (e.SelectedItem as Wallet).ID);
+        {
+            ((App)App.Current).ResumeAtCurrencyAppId = (e.SelectedItem as Wallet).ID;
+            Debug.WriteLine("setting ResumeAtCurrencyAppId = " + (e.SelectedItem as Wallet).ID);
             Wallet w = (e.SelectedItem as Wallet);
 
-            
+
             await Navigation.PushAsync(new UpdateWallet
             {
-				BindingContext = e.SelectedItem as Wallet,
+                BindingContext = e.SelectedItem as Wallet,
             });
+
+        }
+
+        /*
+        async void OnPieChartClicked(object sender, EventArgs e)
+        {
             
-		}
-        
-	}
+            await Navigation.PushAsync(new UpdateWallet());
+            
+        }
+        */
+    }
 }
