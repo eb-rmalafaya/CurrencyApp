@@ -5,20 +5,7 @@
 	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
 		<Label Text="Value" />
         <Entry Text="{Binding Quantity}" Keyboard="Numeric" />
-        <Picker x:Name="Currency" SelectedItem="{Binding Symbol}" HorizontalOptions="FillAndExpand">
-            <Picker.Items>
-                <x:String>USD</x:String>
-                <x:String>EUR</x:String>
-                <x:String>JPY</x:String>
-                <x:String>GBP</x:String>
-                <x:String>CHF</x:String>
-                <x:String>CNY</x:String>
-                <x:String>SEK</x:String>
-                <x:String>MXN</x:String>
-                <x:String>NOK</x:String>
-                <x:String>KRW</x:String>
-            </Picker.Items>
-        </Picker>
+        <Picker x:Name="Currency" SelectedItem="{Binding Symbol}" HorizontalOptions="FillAndExpand"/>
         <Button Text="Save" Clicked="OnSaveClicked" />
         <Button Text="Cancel" Clicked="OnCancelClicked" />
 		<Button Text="Speak" Clicked="OnSpeakClicked" />

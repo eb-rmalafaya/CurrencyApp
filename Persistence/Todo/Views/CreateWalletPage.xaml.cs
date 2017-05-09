@@ -10,7 +10,12 @@ namespace CurrencyApp
 		public CurrencyAppItemPage()
 		{
 			InitializeComponent();
-		}
+            foreach (String symbol in CurrencyDTO.top10Currencies)
+            {
+                if (Currency.SelectedIndex != 0) Currency.SelectedIndex = 0;
+                Currency.Items.Add(symbol);
+            }
+        }
 
 		async void OnSaveClicked(object sender, EventArgs e)
 		{

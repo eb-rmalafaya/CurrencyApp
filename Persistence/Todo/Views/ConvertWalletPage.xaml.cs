@@ -18,24 +18,19 @@ namespace CurrencyApp.Views
         public ConvertWalletPage()
         {
             InitializeComponent();
+            foreach (String symbol in CurrencyDTO.top10Currencies)
+            {
+                if (Currency.SelectedIndex != 0) Currency.SelectedIndex = 0;
+                Currency.Items.Add(symbol);
+            }
         }
 
         async void OnConvert(object sender, EventArgs e)
         {
             try
             {
-                
-                List<string> currenciesNames = new List<string>();
-                currenciesNames.Add("USD");
-                currenciesNames.Add("EUR");
-                currenciesNames.Add("JPY");
-                currenciesNames.Add("GBP");
-                currenciesNames.Add("CHF");
-                currenciesNames.Add("CNY");
-                currenciesNames.Add("SEK");
-                currenciesNames.Add("MXN");
-                currenciesNames.Add("NOK");
-                currenciesNames.Add("KRW");
+
+                List<string> currenciesNames = CurrencyDTO.top10Currencies.ToList<String>();
 
                 CurrencyDTO currency = null;
                 List<CurrencyDTO> currencies = new List<CurrencyDTO>();
@@ -48,10 +43,10 @@ namespace CurrencyApp.Views
 
                 //Get Wallets
                 List<Wallet> wallets = await App.Database.GetItemsAsync();
-                
-                if(wallets != null)
+
+                if (wallets != null)
                 {
-                    if(wallets.Count > 0)
+                    if (wallets.Count > 0)
                     {
                         //Get other currencies
                         foreach (string currencyName in currenciesNames)
@@ -59,11 +54,11 @@ namespace CurrencyApp.Views
                             if (!currencyName.Equals(symbol))
                             {
                                 CurrencyDTO dto = await App.DatabaseCurrencies.GetLastUpdateTimeString(convertToAPIFormat(currencyName));
-                                if(dto != null)
+                                if (dto != null)
                                 {
                                     currencies.Add(dto);
                                 }
-                               
+
                             }
                         }
                         if (currencies.Count > 0)
@@ -74,11 +69,11 @@ namespace CurrencyApp.Views
                             //Sum quantiy
                             APIHandler api = new APIHandler();
                             double quantity = 0.0;
-                            if(wantedWallet != null)
+                            if (wantedWallet != null)
                             {
                                 quantity = wantedWallet.Quantity;
                             }
-                            foreach(CurrencyDTO c in currencies)
+                            foreach (CurrencyDTO c in currencies)
                             {
                                 Wallet finalWallet = wallets.Find(x => x.Symbol.Equals(revertFromAPIFormat(c.Symbol)));
                                 if (finalWallet != null)
@@ -87,16 +82,13 @@ namespace CurrencyApp.Views
                                     double value = api.Convert(c, currency, quantityF);
                                     quantity = quantity + value;
                                 }
-                    
+
                             }
 
                             //Update quantity
                             if (wantedWallet == null)
-                            {
-                                wantedWallet = new Wallet();
-                            }
-                            wantedWallet.Quantity = quantity;
-                            wantedWallet.Symbol = symbol;
+                                wantedWallet = new Wallet(quantity, symbol);
+
                             await App.Database.SaveItemAsync(wantedWallet);
 
                             //Delete other types
@@ -109,12 +101,12 @@ namespace CurrencyApp.Views
                             }
                         }
                     }
-            }
+                }
             }
             catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.StackTrace);
-                }
+            {
+                Debug.WriteLine(ex.StackTrace);
+            }
 
         }
 
@@ -126,7 +118,7 @@ namespace CurrencyApp.Views
         private string revertFromAPIFormat(string currency)
         {
             //EUR=X
-            return currency.Substring(0,3);
+            return currency.Substring(0, 3);
         }
 
     }
