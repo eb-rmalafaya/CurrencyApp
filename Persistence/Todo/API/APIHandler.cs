@@ -4,6 +4,7 @@ using CurrencyApp.Models;
 using Newtonsoft.Json.Linq;
 using System.Net;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace CurrencyApp.API
 {
@@ -70,7 +71,26 @@ namespace CurrencyApp.API
         public Double Convert(CurrencyDTO symbolFrom, CurrencyDTO symbolTo, Double qtd)
         {
             return (symbolFrom.Price / symbolTo.Price) * qtd;
-        }        
+        }
+
+        public String UpdateCurrencies()
+        {
+            try
+            {
+                List<CurrencyDTO> currencies = GetCurrenciesDTO();
+                if (currencies != null)
+                {
+                    // filter list of currencies
+                    App.DatabaseCurrencies.SaveItemsAsync(CurrencyDTO.filterList(currencies));
+                    return "Last Update: " + Utils.Utils.getCurrentDateString();
+                }
+            }
+            catch (Exception e)
+            {
+                return "Error Updating";
+            }
+            return "";
+        }
 
         public List<CurrencyDTO> GetCurrenciesDTO()
         {

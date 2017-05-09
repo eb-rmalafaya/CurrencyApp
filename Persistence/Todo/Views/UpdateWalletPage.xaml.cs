@@ -12,6 +12,7 @@ namespace CurrencyApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpdateWallet : ContentPage
     {
+
         public UpdateWallet()
         {
             InitializeComponent();
@@ -48,6 +49,17 @@ namespace CurrencyApp.Views
         {
             var CurrencyAppItem = (Wallet)BindingContext;
             DependencyService.Get<ITextToSpeech>().Speak(CurrencyAppItem.Quantity + " " + CurrencyAppItem.Symbol);
+        }
+
+        async void OnConvertClicked(object sender, EventArgs e)
+        {
+            var CurrencyAppItem = (Wallet)BindingContext;
+
+            //redirect to ConvertSingleWallet
+            await Navigation.PushAsync(new ConvertSingleWallet
+            {
+                BindingContext = CurrencyAppItem as Wallet,
+            });
         }
     }
 }

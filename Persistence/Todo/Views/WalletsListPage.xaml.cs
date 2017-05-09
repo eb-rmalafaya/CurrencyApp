@@ -39,22 +39,14 @@ namespace CurrencyApp
             if (Utils.Utils.hasInternetAccess())
             {
                 // atualizar currencies
-                APIHandler api = new APIHandler();
-                List<CurrencyDTO> package = null;
                 try
                 {
-                    package = api.GetCurrenciesDTO();
-                    String gg = "Go";
-                    if (package != null)
-                    {
-                        refreshLabel.Text = "Last Update: " + Utils.Utils.getCurrentDateString();
-                        await App.DatabaseCurrencies.SaveItemsAsync(package);
-                    }
+                    APIHandler api = new APIHandler();
+                    refreshLabel.Text = api.UpdateCurrencies();
                 }
                 catch (Exception exception)
                 {
                     // show dialog
-                    String var = "Ola";
                     //await DisplayAlert("Warning", "The API is currently unavailable. Please Try Again", "OK");
                 }
                 // mudar label
@@ -75,7 +67,7 @@ namespace CurrencyApp
             Debug.WriteLine("setting ResumeAtCurrencyAppId = " + (e.SelectedItem as Wallet).ID);
             Wallet w = (e.SelectedItem as Wallet);
 
-        
+
             await Navigation.PushAsync(new UpdateWallet
             {
                 BindingContext = e.SelectedItem as Wallet,
@@ -83,7 +75,7 @@ namespace CurrencyApp
 
         }
 
-        
+
         async void OnPieChartClicked(object sender, EventArgs e)
         {
 
@@ -91,7 +83,7 @@ namespace CurrencyApp
 
         async void OnConvertWallet(object sender, EventArgs e)
         {
-            
+
 
             await Navigation.PushAsync(new ConvertWalletPage
             {

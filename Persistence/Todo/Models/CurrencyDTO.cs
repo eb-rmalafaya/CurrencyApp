@@ -5,6 +5,35 @@ namespace CurrencyApp.Models
 {
     public class CurrencyDTO
     {
+
+        public static String[] top10Currencies = {
+            "USD",
+            "EUR",
+            "JPY",
+            "GBP",
+            "CHF",
+            "CNY",
+            "SEK",
+            "MXN",
+            "NOK",
+            "KRW" };
+
+        public static List<CurrencyDTO> filterList(List<CurrencyDTO> list)
+        {
+            List<CurrencyDTO> filteredList = new List<CurrencyDTO>();
+            foreach(CurrencyDTO currency in list)
+            {
+                foreach (String symbol in top10Currencies)
+                {
+                    if (currency.Symbol.Contains(symbol))
+                    {
+                        filteredList.Add(currency);
+                    }
+                }           
+            }
+            return filteredList;
+        }
+
         public CurrencyDTO()
         {
 
