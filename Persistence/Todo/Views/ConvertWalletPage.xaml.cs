@@ -107,6 +107,7 @@ namespace CurrencyApp.Views
             {
                 Debug.WriteLine(ex.StackTrace);
             }
+            await Navigation.PopAsync();
 
         }
 

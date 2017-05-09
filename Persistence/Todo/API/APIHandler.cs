@@ -21,7 +21,7 @@ namespace CurrencyApp.API
             return client.Get(API_URL_ALL, cb);
         }
 
-        public static async void Convert(String symbolFrom, String symbolTo,Wallet wallet, Double toConvertoQuantity)
+        public static async Task<int> Convert(String symbolFrom, String symbolTo,Wallet wallet, Double toConvertoQuantity)
         {
             CurrencyDTO to = await App.DatabaseCurrencies.GetLastUpdateTimeString(symbolTo + "=X");
             CurrencyDTO from = await App.DatabaseCurrencies.GetLastUpdateTimeString(symbolFrom + "=X");
@@ -38,8 +38,9 @@ namespace CurrencyApp.API
                 {
                     await App.Database.DeleteItemAsync(wallet);
                 }
-                await App.Database.SaveOrUpdateItemAsync(new Wallet(convertedQuantity, symbolTo));
+                return await App.Database.SaveOrUpdateItemAsync(new Wallet(convertedQuantity, symbolTo));
             }
+            return -1;
         }
 
         public Double Convert(String symbolFrom, String symbolTo, Double qtd, List<CurrencyDTO> list)

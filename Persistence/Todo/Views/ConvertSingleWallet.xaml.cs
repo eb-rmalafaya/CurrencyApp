@@ -39,9 +39,8 @@ namespace CurrencyApp.Views
             currencyAppItem.Quantity = oldQuantity;
             string toSymbol = (string)Picker.SelectedItem;
             // convert
-            APIHandler.Convert(currencyAppItem.Symbol, toSymbol, currencyAppItem, selectedQuantity);
-            // return to page
-
+            await APIHandler.Convert(currencyAppItem.Symbol, toSymbol, currencyAppItem, selectedQuantity);
+            await Navigation.PopToRootAsync();
         }
     }
 }
