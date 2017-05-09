@@ -83,13 +83,11 @@ namespace CurrencyApp
 
         }
 
-        /*
+        
         async void OnPieChartClicked(object sender, EventArgs e)
         {
-            
-            await Navigation.PushAsync(new UpdateWallet());
-            
+
         }
-        */
+        
     }
 }

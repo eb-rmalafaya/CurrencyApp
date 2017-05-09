@@ -15,6 +15,17 @@ namespace CurrencyApp.Views
         public PieChartPageExample()
         {
             InitializeComponent();
+
+
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Reset the 'resume' id, since we just want to re-start here
+            ((App)App.Current).ResumeAtCurrencyAppId = -1;
+
         }
     }
 }
