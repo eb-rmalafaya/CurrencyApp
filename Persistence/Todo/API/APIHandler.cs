@@ -28,9 +28,11 @@ namespace CurrencyApp.API
             if (to != null && from != null)
             {
                 Double convertedQuantity = new APIHandler().Convert(from, to, toConvertoQuantity);
-                if (wallet.Quantity - toConvertoQuantity >= 0.1)
+                Double diff = wallet.Quantity - toConvertoQuantity;
+                wallet.Quantity = wallet.Quantity - diff;
+                if (diff >= 0.1)
                 {
-                    await App.Database.SaveOrUpdateItemAsync(new Wallet((wallet.Quantity - toConvertoQuantity), symbolFrom));
+                    await App.Database.SaveItemAsync(wallet);
                 }
                 else
                 {

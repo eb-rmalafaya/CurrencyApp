@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using SQLite;
+using System;
 
 namespace CurrencyApp.Models
 {
@@ -12,7 +13,7 @@ namespace CurrencyApp.Models
 
         public Wallet(double qtd, string symbol)
         {
-            Quantity = qtd;
+            Quantity = Math.Round(qtd, 2);
             Symbol = symbol;
         }
 
