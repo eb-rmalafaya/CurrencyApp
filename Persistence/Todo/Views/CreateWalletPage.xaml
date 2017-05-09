@@ -4,7 +4,7 @@
              x:Class="CurrencyApp.CurrencyAppItemPage" Title="{Binding Quantity} + {Binding Symbol}">
 	<StackLayout Margin="20" VerticalOptions="StartAndExpand">
 		<Label Text="Value" />
-		<Entry Text="{Binding Quantity}" />
+        <Entry Text="{Binding Quantity}" Keyboard="Numeric" />
         <Picker x:Name="Currency" SelectedItem="{Binding Symbol}" HorizontalOptions="FillAndExpand">
             <Picker.Items>
                 <x:String>USD</x:String>

@@ -48,11 +48,11 @@ namespace CurrencyApp.Views
                 List<Wallet> wallets = await App.Database.GetItemsAsync();
 
                 //Get other currencies
-                foreach (string c in currenciesNames)
+                foreach (string currencyName in currenciesNames)
                 {
-                    if (!c.Equals(symbol))
+                    if (!currencyName.Equals(symbol))
                     {
-                        currencies.Add(await App.DatabaseCurrencies.GetLastUpdateTimeString(convertToAPIFormat(c)));
+                        currencies.Add(await App.DatabaseCurrencies.GetLastUpdateTimeString(convertToAPIFormat(currencyName)));
                     }
                 }                
 
