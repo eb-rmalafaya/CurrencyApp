@@ -75,7 +75,7 @@ namespace CurrencyApp
             Debug.WriteLine("setting ResumeAtCurrencyAppId = " + (e.SelectedItem as Wallet).ID);
             Wallet w = (e.SelectedItem as Wallet);
 
-
+        
             await Navigation.PushAsync(new UpdateWallet
             {
                 BindingContext = e.SelectedItem as Wallet,
@@ -88,6 +88,16 @@ namespace CurrencyApp
         {
 
         }
-        
+
+        async void OnConvertWallet(object sender, EventArgs e)
+        {
+            
+
+            await Navigation.PushAsync(new ConvertWalletPage
+            {
+            });
+
+        }
+
     }
 }

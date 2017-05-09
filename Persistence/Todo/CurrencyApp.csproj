@@ -41,6 +41,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App.cs" />
     <Compile Include="Utils\Utils.cs" />
+    <Compile Include="Views\ConvertWalletPage.xaml.cs">
+      <DependentUpon>ConvertWalletPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\PieChartPageExample.xaml.cs">
       <DependentUpon>PieChartPageExample.xaml</DependentUpon>
     </Compile>
@@ -113,6 +116,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\PieChartPageExample.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ConvertWalletPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

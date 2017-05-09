@@ -30,6 +30,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Convert Entire Wallet" Clicked="OnConvertWallet" />
         </StackLayout>
     </Frame>
 </ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CurrencyApp.Views.ConvertWalletPage">
+    <StackLayout>
+        <Picker x:Name="Currency" HorizontalOptions="FillAndExpand">
+            <Picker.Items>
+                <x:String>USD</x:String>
+                <x:String>EUR</x:String>
+                <x:String>JPY</x:String>
+                <x:String>GBP</x:String>
+                <x:String>CHF</x:String>
+                <x:String>CNY</x:String>
+                <x:String>SEK</x:String>
+                <x:String>MXN</x:String>
+                <x:String>NOK</x:String>
+                <x:String>KRW</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button Text="Convert" Clicked="OnConvert" />
+    </StackLayout>
+</ContentPage>

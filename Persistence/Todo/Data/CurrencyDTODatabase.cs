@@ -79,6 +79,24 @@ namespace CurrencyApp.Data
         {
             return database.DeleteAsync(item);
         }
+
+        /*
+        public async Task<List<CurrencyDTO>> GetLastUpdateTimeCurrency()
+        {
+            List<CurrencyDTO> list = await database.QueryAsync<CurrencyDTO>("SELECT * FROM [CurrencyDTO] ORDER BY [RequestTimestamp] DESC");
+            if (list == null || list.Count == 0) return null;
+            return list;
+        }
+        */
+
+        public async Task<CurrencyDTO> GetLastUpdateTimeString(String symbol)
+        {
+            List<CurrencyDTO> list = await database.QueryAsync<CurrencyDTO>("SELECT * FROM [CurrencyDTO] WHERE [Symbol] = '" + symbol + "' ORDER BY [RequestTimestamp] DESC");
+            if (list == null || list.Count == 0) return null;
+            return list[0];
+        }
+
+
     }
 }
 
