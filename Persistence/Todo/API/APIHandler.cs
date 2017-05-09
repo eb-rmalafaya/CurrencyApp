@@ -21,6 +21,25 @@ namespace CurrencyApp.API
             return client.Get(API_URL_ALL, cb);
         }
 
+        public static async void Convert(String symbolFrom, String symbolTo,Wallet wallet, Double toConvertoQuantity)
+        {
+            CurrencyDTO to = await App.DatabaseCurrencies.GetLastUpdateTimeString(symbolTo + "=X");
+            CurrencyDTO from = await App.DatabaseCurrencies.GetLastUpdateTimeString(symbolFrom + "=X");
+            if (to != null && from != null)
+            {
+                Double convertedQuantity = new APIHandler().Convert(from, to, toConvertoQuantity);
+                if (wallet.Quantity - toConvertoQuantity >= 0.1)
+                {
+                    await App.Database.SaveOrUpdateItemAsync(new Wallet((wallet.Quantity - toConvertoQuantity), symbolFrom));
+                }
+                else
+                {
+                    await App.Database.DeleteItemAsync(wallet);
+                }
+                await App.Database.SaveOrUpdateItemAsync(new Wallet(convertedQuantity, symbolTo));
+            }
+        }
+
         public Double Convert(String symbolFrom, String symbolTo, Double qtd, List<CurrencyDTO> list)
         {
             CurrencyDTO from = null;
@@ -45,7 +64,7 @@ namespace CurrencyApp.API
                 }
             }
 
-            return Convert(to, from, qtd);
+            return Convert(from, to, qtd);
         }
 
         public String GetAllCurrenciesSync()
@@ -70,7 +89,7 @@ namespace CurrencyApp.API
 
         public Double Convert(CurrencyDTO symbolFrom, CurrencyDTO symbolTo, Double qtd)
         {
-            return (symbolFrom.Price / symbolTo.Price) * qtd;
+            return (symbolTo.Price / symbolFrom.Price) * qtd;
         }
 
         public String UpdateCurrencies()
@@ -113,23 +132,6 @@ namespace CurrencyApp.API
                 list.Add(new CurrencyDTO(name, type, ts, utctime, price, symbol));
             }
             return list;
-        }
-
-        private void CallHandler(IAsyncResult ar)
-        {
-            var state = (Tuple<WebRequest>)ar.AsyncState;
-            var request = state.Item1;
-
-            using (HttpWebResponse response = request.EndGetResponse(ar) as HttpWebResponse)
-            {
-                //Device.BeginInvokeOnMainThread(() => state.Item1.Text = "Status: " + response.StatusCode);
-                if (response.StatusCode == HttpStatusCode.OK)
-                    using (StreamReader reader = new StreamReader(response.GetResponseStream()))
-                    {
-                        string content = reader.ReadToEnd();
-                        //Device.BeginInvokeOnMainThread(() => state.Item2.Text = content);
-                    }
-            }
         }
     }
 }

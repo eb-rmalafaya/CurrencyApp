@@ -56,7 +56,7 @@ namespace CurrencyApp.Views
             var CurrencyAppItem = (Wallet)BindingContext;
 
             //redirect to ConvertSingleWallet
-            await Navigation.PushAsync(new ConvertSingleWallet
+            await Navigation.PushAsync(new ConvertSingleWallet(CurrencyAppItem)
             {
                 BindingContext = CurrencyAppItem as Wallet,
             });

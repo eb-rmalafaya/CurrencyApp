@@ -6,6 +6,8 @@
         <Label Text="Value" />
         <Entry Text="{Binding Quantity}" Keyboard="Numeric" />
         <Label Text="{Binding Symbol}"/>
+        <Label Text="Convert to: "/>
+        <Picker x:Name="Picker" HorizontalOptions="FillAndExpand"/>
         <Button Text="Convert" Clicked="OnConvertClicked" />
     </StackLayout>
 </ContentPage>

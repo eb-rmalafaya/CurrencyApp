@@ -107,8 +107,9 @@ namespace TestingLab
         {
             APIHandler api = new APIHandler();
             List<CurrencyDTO> list = api.GetCurrenciesDTO();
-            Double response = api.Convert("EUR", "USD", 1, list);
-            Assert.IsTrue(response > 1);
+            Double selectedQuantity = 10;
+            Double response = api.Convert("EUR", "USD", selectedQuantity, list);
+            Assert.IsTrue(response > selectedQuantity);
         }
 
         [TestMethod]
