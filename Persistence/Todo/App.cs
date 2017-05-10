@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Diagnostics;
 using CurrencyApp.Data;
+using CurrencyApp.Views;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace CurrencyApp
@@ -18,7 +19,7 @@ namespace CurrencyApp
 			Resources.Add("primaryDarkGrey", Color.FromHex("47525E"));
 			Resources.Add("primaryWhiteGrey", Color.FromHex("F0F0F0"));
 
-			var nav = new NavigationPage(new CurrencyAppListPage());
+			var nav = new NavigationPage(new OxyPlotPage());
 			nav.BarBackgroundColor = (Color)App.Current.Resources["primaryDarkGrey"];
 			nav.BarTextColor = Color.White;
             nav.BackgroundColor = (Color)App.Current.Resources["primaryWhiteGrey"];
