@@ -9,7 +9,11 @@
         {
             OxyPlot.Xamarin.Forms.Platform.UWP.PlotViewRenderer.Init();
             this.InitializeComponent();
+            OxyPlot.Xamarin.Forms.Platform.UWP.PlotViewRenderer.Init();
+
             LoadApplication(new CurrencyApp.App());
+            OxyPlot.Xamarin.Forms.Platform.UWP.PlotViewRenderer.Init();
+
         }
     }
 }

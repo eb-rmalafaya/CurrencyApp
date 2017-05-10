@@ -31,57 +31,150 @@ namespace CurrencyApp.Views
         public OxyPlotPage()
         {
 
-            PieModel = CreatePieChart();
-            AreaModel = CreateAreaChart();
-            StackedBarModel = CreateBarChart(true, "Stacked Bar");
-            BarModel = CreateBarChart(false, "Un-Stacked Bar");
-           
-            
-            //
-            PlotView plot = new PlotView
+            StackLayout column1 = new StackLayout
             {
-                Model = PieModel,
-                WidthRequest = 300,
-                HeightRequest = 300,
-                VerticalOptions = LayoutOptions.Center,
-                HorizontalOptions = LayoutOptions.Center,
-            };
-            //
-            //
-            var picker = new Picker { Title = "Select a monkey" };
-            picker.SelectedIndexChanged += delegate
-            {
-                number1 += number2;
-                plot.Model = CreatePieChart();
-            };
-            foreach (String symbol in CurrencyDTO.top10Currencies)
-            {
-                if (picker.SelectedIndex != 0) picker.SelectedIndex = 0;
-                picker.Items.Add(symbol);
-            }
-            //
-            Button button = new Button { Text = "Convert" };
-            button.Clicked += delegate
-            {
-                //number1 += number2;
-                //plot.Model = CreatePieChart();
-            };
-
-            var contentView = new ContentView
-            {
-                Content = new StackLayout
+                Children =
                 {
-                    VerticalOptions = LayoutOptions.FillAndExpand,
-                    Children = {
-                    picker,
-                    button,
-                    plot
-        }
-                }
+                    new Label{Text = "20", FontSize = 10, HorizontalOptions = LayoutOptions.Center},
+                    new BoxView{
+                    Color = Color.Gray,
+                    WidthRequest = 80,
+                    HeightRequest = 150,
+                    HorizontalOptions = LayoutOptions.EndAndExpand,
+                    VerticalOptions = LayoutOptions.EndAndExpand
+                    },
+                    new Label{Text = "JPY", FontSize = 10, HorizontalOptions = LayoutOptions.Center},
+                },
+                HorizontalOptions = LayoutOptions.EndAndExpand,
+                VerticalOptions = LayoutOptions.EndAndExpand
             };
 
+            StackLayout column2 = new StackLayout
+            {
+                Children =
+                {
+                    new Label{Text = "40", FontSize = 10, HorizontalOptions = LayoutOptions.Center},
+                    new BoxView{
+                    Color = Color.Cyan,
+                    WidthRequest = 80,
+                    HeightRequest = 200,
+                    HorizontalOptions = LayoutOptions.EndAndExpand,
+                    VerticalOptions = LayoutOptions.EndAndExpand
+                    },
+                    new Label{Text = "GBP", FontSize = 10, HorizontalOptions = LayoutOptions.Center},
+                },
+                HorizontalOptions = LayoutOptions.EndAndExpand,
+                VerticalOptions = LayoutOptions.EndAndExpand
+            };
 
-            Content = plot;
+            StackLayout column3 = new StackLayout
+            {
+                Children =
+                {
+                    new Label{Text = "110", FontSize = 10, HorizontalOptions = LayoutOptions.CenterAndExpand},
+                    new BoxView{
+                    Color = Color.Gold,
+                    WidthRequest = 80,
+                    HeightRequest = 300,
+                    HorizontalOptions = LayoutOptions.EndAndExpand,
+                    VerticalOptions = LayoutOptions.EndAndExpand
+                    },
+                    new Label{Text = "EUR", FontSize = 10, HorizontalOptions = LayoutOptions.Center},
+                },
+                HorizontalOptions = LayoutOptions.EndAndExpand,
+                VerticalOptions = LayoutOptions.EndAndExpand
+            };
+
+            StackLayout barChart = new StackLayout
+            {
+                Children =
+                {
+                    column1,
+                    column2,
+                    column3
+                },
+                Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                //BackgroundColor = Color.GhostWhite
+            };
+
+            /*Orientation = StackOrientation.Horizontal,
+     HorizontalOptions = LayoutOptions.FillAndExpand, */
+
+
+
+            this.Content = barChart;
+
+            /* PieModel = CreatePieChart();
+             AreaModel = CreateAreaChart();
+             StackedBarModel = CreateBarChart(true, "Stacked Bar");
+             BarModel = CreateBarChart(false, "Un-Stacked Bar");
+
+
+             //
+             PlotView plot = new PlotView
+             {
+                 Model = StackedBarModel,
+                 VerticalOptions = LayoutOptions.Fill,
+                 HorizontalOptions = LayoutOptions.Fill,
+             };
+             //
+             //
+             var picker = new Picker { Title = "Select a monkey" };
+             picker.SelectedIndexChanged += delegate
+             {
+                 number1 += number2;
+                 plot.Model = CreatePieChart();
+             };
+             foreach (String symbol in CurrencyDTO.top10Currencies)
+             {
+                 if (picker.SelectedIndex != 0) picker.SelectedIndex = 0;
+                 picker.Items.Add(symbol);
+             }
+             //
+             Button button = new Button { Text = "Convert" };
+             button.Clicked += delegate
+             {
+                 //number1 += number2;
+                 //plot.Model = CreatePieChart();
+             };
+             var absolute = new Frame
+             {
+                 HeightRequest = 100,
+                 WidthRequest = 100,
+                 VerticalOptions = LayoutOptions.FillAndExpand,
+                 HorizontalOptions = LayoutOptions.CenterAndExpand,
+                 Content = plot
+             };
+
+             var contentView1 = new ContentView
+             {
+                 Content = new AbsoluteLayout
+                 {
+                     VerticalOptions = LayoutOptions.FillAndExpand,
+                     Children = {
+                     plot
+                 }
+                 }
+             };
+
+             var contentView = new ContentView
+             {
+                 Content = new StackLayout
+                 {
+                     VerticalOptions = LayoutOptions.FillAndExpand,
+                     Children = {
+                     picker,
+                     button,
+                     plot
+                 }
+                 }
+             };
+
+
+             Content = absolute;*/
+
         }
         private PlotModel CreatePieChart()
         {
