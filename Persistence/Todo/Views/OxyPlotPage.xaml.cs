@@ -81,7 +81,7 @@ namespace CurrencyApp.Views
             };
 
 
-            Content = contentView;
+            Content = plot;
         }
         private PlotModel CreatePieChart()
         {
