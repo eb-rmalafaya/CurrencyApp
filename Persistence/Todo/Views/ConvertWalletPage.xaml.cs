@@ -1,5 +1,6 @@
 ﻿using CurrencyApp.API;
 using CurrencyApp.Models;
+using CurrencyApp.Utils;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -15,7 +16,7 @@ namespace CurrencyApp.Views
         private Picker Currency;
         private Button Button;
 
-        public ConvertWalletPage()
+        public ConvertWalletPage(List<Wallet> listOfWallets)
         {
             //InitializeComponent();
             createPicker();
@@ -30,9 +31,11 @@ namespace CurrencyApp.Views
                     Children = {
                      Currency,
                      Button,
+                     BarChartFactory.createChart(listOfWallets)
                  }
                 }
             };
+
             Content = contentView;
         }
 

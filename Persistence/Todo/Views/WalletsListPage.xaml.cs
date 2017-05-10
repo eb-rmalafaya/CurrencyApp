@@ -10,6 +10,8 @@ namespace CurrencyApp
 {
     public partial class CurrencyAppListPage : ContentPage
     {
+
+        private List<Wallet> listOfWallets;
         public CurrencyAppListPage()
         {
             InitializeComponent();
@@ -21,7 +23,8 @@ namespace CurrencyApp
 
             // Reset the 'resume' id, since we just want to re-start here
             ((App)App.Current).ResumeAtCurrencyAppId = -1;
-            listView.ItemsSource = await App.Database.GetItemsAsync();
+            listOfWallets = await App.Database.GetItemsAsync();
+            listView.ItemsSource = listOfWallets;
             refreshLabel.Text = "Last Update: " + await App.DatabaseCurrencies.GetLastUpdateTimeString();
 
         }
@@ -85,7 +88,7 @@ namespace CurrencyApp
         {
 
 
-            await Navigation.PushAsync(new ConvertWalletPage
+            await Navigation.PushAsync(new ConvertWalletPage(listOfWallets)
             {
             });
 
