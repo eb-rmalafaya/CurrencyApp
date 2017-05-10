@@ -7,8 +7,8 @@
     {
         public MainPage()
         {
-            this.InitializeComponent();
             OxyPlot.Xamarin.Forms.Platform.UWP.PlotViewRenderer.Init();
+            this.InitializeComponent();
             LoadApplication(new CurrencyApp.App());
         }
     }

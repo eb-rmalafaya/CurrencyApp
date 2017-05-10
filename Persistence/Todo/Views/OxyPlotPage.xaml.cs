@@ -1,4 +1,5 @@
-﻿using OxyPlot;
+﻿using CurrencyApp.Models;
+using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
 using OxyPlot.Xamarin.Forms;
@@ -11,32 +12,76 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace CurrencyApp.Views
 {
+
+
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OxyPlotPage : ContentPage
     {
+        private Double number1 = 100;
+        private Double number2 = 300;
+
         public PlotModel PieModel { get; set; }
         public PlotModel AreaModel { get; set; }
         public PlotModel BarModel { get; set; }
         public PlotModel StackedBarModel { get; set; }
 
-
-
         public OxyPlotPage()
         {
-            
+
             PieModel = CreatePieChart();
             AreaModel = CreateAreaChart();
             StackedBarModel = CreateBarChart(true, "Stacked Bar");
             BarModel = CreateBarChart(false, "Un-Stacked Bar");
-
-            Content = new PlotView
+           
+            
+            //
+            PlotView plot = new PlotView
             {
                 Model = PieModel,
-                VerticalOptions = LayoutOptions.Fill,
-                HorizontalOptions = LayoutOptions.Fill,
+                WidthRequest = 300,
+                HeightRequest = 300,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center,
             };
+            //
+            //
+            var picker = new Picker { Title = "Select a monkey" };
+            picker.SelectedIndexChanged += delegate
+            {
+                number1 += number2;
+                plot.Model = CreatePieChart();
+            };
+            foreach (String symbol in CurrencyDTO.top10Currencies)
+            {
+                if (picker.SelectedIndex != 0) picker.SelectedIndex = 0;
+                picker.Items.Add(symbol);
+            }
+            //
+            Button button = new Button { Text = "Convert" };
+            button.Clicked += delegate
+            {
+                //number1 += number2;
+                //plot.Model = CreatePieChart();
+            };
+
+            var contentView = new ContentView
+            {
+                Content = new StackLayout
+                {
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    Children = {
+                    picker,
+                    button,
+                    plot
+        }
+                }
+            };
+
+
+            Content = contentView;
         }
         private PlotModel CreatePieChart()
         {
@@ -52,11 +97,11 @@ namespace CurrencyApp.Views
 
             // http://www.nationsonline.org/oneworld/world_population.htm
             // http://en.wikipedia.org/wiki/Continent
-            ps.Slices.Add(new PieSlice("Africa", 1030) { IsExploded = false });
-            ps.Slices.Add(new PieSlice("Americas", 929) { IsExploded = false });
-            ps.Slices.Add(new PieSlice("Asia", 4157));
-            ps.Slices.Add(new PieSlice("Europe", 739) { IsExploded = false });
-            ps.Slices.Add(new PieSlice("Oceania", 35) { IsExploded = false });
+            ps.Slices.Add(new PieSlice("Africa", number1) { IsExploded = false });
+            ps.Slices.Add(new PieSlice("Americas", number1) { IsExploded = false });
+            ps.Slices.Add(new PieSlice("Asia", number1));
+            ps.Slices.Add(new PieSlice("Europe", number2) { IsExploded = false });
+            ps.Slices.Add(new PieSlice("Oceania", number2) { IsExploded = false });
             model.Series.Add(ps);
             return model;
         }

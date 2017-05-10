@@ -28,6 +28,7 @@ namespace CurrencyApp.UWP
         /// </summary>
         public App()
         {
+            OxyPlot.Xamarin.Forms.Platform.UWP.PlotViewRenderer.Init();
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
@@ -48,6 +49,7 @@ namespace CurrencyApp.UWP
 #endif
 
             Frame rootFrame = Window.Current.Content as Frame;
+            OxyPlot.Xamarin.Forms.Platform.UWP.PlotViewRenderer.Init();
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
@@ -58,6 +60,7 @@ namespace CurrencyApp.UWP
 
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 Xamarin.Forms.Forms.Init(e);
+
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //CurrencyApp: Load state from previously suspended application
